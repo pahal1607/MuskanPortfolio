@@ -1,0 +1,1081 @@
+<!doctype html><html lang="en"><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Muskan Pandit Interiors</title><meta name="claude:viewport-fit-sides" content="cover"><meta name="description" content="Interior design portfolio of Muskan Pandit: residential interiors, wardrobe planning, kitchens, bedrooms and 3D visualization."><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:wght@400;500;700&display=swap"><style id="app-css">/* Layout: colour-blocked, image-led. Moving rows of arch and pill shaped renders, one bright panel per project, soft floating shapes. */
+:root {
+  --bg: #fff7ea; --ink: #1e1b2e;
+  --c1: #ffc53d; --c2: #ff6b4a; --c3: #3cc4b6; --c4: #5aa9f6;
+  --accent: var(--c2); --on-c: #1e1b2e;
+  --sand: var(--ink); --on-sand: var(--bg); --danger: #d6402a;
+  --line: color-mix(in srgb, var(--ink) 14%, transparent);
+  --muted: color-mix(in srgb, var(--ink) 62%, var(--bg));
+  --surface: color-mix(in srgb, var(--bg) 92%, var(--ink));
+  --shadow: rgba(30, 27, 46, 0.28);
+  --f-display: 'Bricolage Grotesque', 'Avenir Next', system-ui, sans-serif;
+  --f-body: 'DM Sans', 'Avenir Next', system-ui, sans-serif;
+  --ease: cubic-bezier(0.22, 0.8, 0.24, 1);
+  --r: clamp(22px, 4vw, 42px);
+  color-scheme: light;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--f-body); font-size: 16px; line-height: 1.6; overflow-x: hidden; transition: background 0.4s; }
+body.lock { overflow: hidden; }
+body::before { content: ''; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); background: var(--bg); z-index: 70; }
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+button { font: inherit; color: inherit; cursor: pointer; }
+:focus-visible { outline: 3px solid var(--c4); outline-offset: 3px; border-radius: 6px; }
+::selection { background: var(--c1); color: var(--on-c); }
+.wrap { width: 100%; max-width: 1360px; margin-inline: auto; padding-left: max(18px, env(safe-area-inset-left, 0px)); padding-right: max(18px, env(safe-area-inset-right, 0px)); }
+.icon { width: 1.15em; height: 1.15em; flex: none; stroke: currentColor; fill: none; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+
+/* type */
+.display { font-family: var(--f-display); font-weight: 700; letter-spacing: -0.04em; line-height: 0.96; margin: 0; text-wrap: balance; }
+.h1 { font-size: clamp(2.6rem, 10.5vw, 6.6rem); }
+.h2 { font-size: clamp(2.1rem, 7vw, 4.2rem); }
+.kicker { margin: 0; font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 700; color: var(--muted); }
+.lede { font-size: clamp(1.05rem, 2vw, 1.25rem); line-height: 1.6; max-width: 56ch; margin: 0; }
+.hl { background: linear-gradient(transparent 58%, var(--c1) 58% 90%, transparent 90%); padding-inline: 0.06em; margin-inline: -0.06em; }
+
+/* buttons */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.6rem; min-height: 52px; padding: 0 1.6rem; border-radius: 999px; border: 2px solid var(--ink); background: var(--ink); color: var(--bg); font-family: var(--f-body); font-size: 0.92rem; font-weight: 700; text-decoration: none; transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease), background 0.3s, color 0.3s; }
+.btn:hover { transform: translateY(-3px) rotate(-1deg); box-shadow: 0 12px 0 -4px var(--c1); }
+.btn.ghost { background: transparent; color: var(--ink); }
+.btn.ghost:hover { background: var(--ink); color: var(--bg); }
+.btn.small { min-height: 40px; padding: 0 1.05rem; font-size: 0.82rem; }
+.btn.wa { background: #1fa35c; border-color: #1fa35c; color: #fff; }
+.btn.danger { background: transparent; color: var(--danger); border-color: var(--danger); }
+.btn[disabled] { opacity: 0.45; pointer-events: none; }
+.ib { width: 44px; height: 44px; display: grid; place-items: center; background: none; border: 2px solid transparent; border-radius: 50%; }
+.ib:hover { border-color: var(--line); }
+
+/* reveal */
+[data-rv] { transition: opacity 0.9s var(--ease), transform 0.9s var(--ease); transition-delay: var(--d, 0s); }
+[data-rv].pre { opacity: 0; transform: translateY(40px) scale(0.985); }
+[data-rv].pre.in { opacity: 1; transform: none; }
+
+/* top bar */
+.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 50; background: color-mix(in srgb, var(--bg) 86%, transparent); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); transition: transform 0.5s var(--ease); }
+.top.hide { transform: translateY(-110%); }
+.top-in { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 64px; }
+.brand { font-family: var(--f-display); font-weight: 800; letter-spacing: -0.03em; font-size: 1.25rem; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; }
+.brand::before { content: ''; width: 14px; height: 14px; border-radius: 50%; background: var(--c2); box-shadow: 10px 0 0 -2px var(--c1), 20px 0 0 -4px var(--c3); margin-right: 18px; }
+.links { display: none; gap: 1.8rem; }
+.links a { text-decoration: none; font-weight: 600; font-size: 0.95rem; }
+.links a:hover { text-decoration: underline; text-decoration-thickness: 3px; text-underline-offset: 6px; text-decoration-color: var(--c2); }
+.top-act { display: flex; align-items: center; gap: 0.5rem; }
+@media (min-width: 860px) { .links { display: flex; } }
+.prog { position: fixed; left: 0; top: env(safe-area-inset-top, 0px); height: 4px; width: 100%; transform-origin: left; transform: scaleX(0); z-index: 80; background: linear-gradient(90deg, var(--c1), var(--c2), var(--c3), var(--c4)); }
+
+/* hero */
+.hero { position: relative; padding-top: clamp(20px, 5vw, 56px); padding-bottom: clamp(36px, 6vw, 80px); overflow: hidden; }
+.hero-top { position: relative; display: grid; gap: 1.2rem; z-index: 1; }
+.name { font-family: var(--f-display); font-weight: 800; letter-spacing: -0.055em; line-height: 0.84; font-size: clamp(4rem, 23vw, 13rem); margin: 0; }
+.name .ln { display: block; overflow: hidden; padding-bottom: 0.1em; margin-bottom: -0.06em; }
+.name .ln > span { display: block; transform: translateY(110%); animation: rise 1.2s var(--ease) forwards; }
+.name .ln:nth-child(2) > span { animation-delay: 0.12s; }
+@keyframes rise { to { transform: none; } }
+.hero-tag { font-size: clamp(1.1rem, 2.6vw, 1.5rem); font-weight: 500; max-width: 26ch; line-height: 1.35; margin: 0; opacity: 0; animation: fadeUp 1s 0.5s var(--ease) forwards; }
+.cta { display: flex; flex-wrap: wrap; gap: 0.7rem; opacity: 0; animation: fadeUp 1s 0.7s var(--ease) forwards; }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+.shape { position: absolute; z-index: 0; pointer-events: none; will-change: transform; }
+.shape.sun { width: clamp(70px, 16vw, 190px); aspect-ratio: 1; border-radius: 50%; background: var(--c1); right: 6%; top: 2%; animation: bob 7s ease-in-out infinite; }
+.shape.arch { width: clamp(56px, 12vw, 140px); aspect-ratio: 0.72; border-radius: 999px 999px 0 0; background: var(--c3); right: 27%; top: -2%; animation: bob 9s -3s ease-in-out infinite; }
+.shape.dot { width: clamp(26px, 5vw, 60px); aspect-ratio: 1; border-radius: 50%; background: var(--c2); right: 3%; top: 38%; animation: bob 6s -1s ease-in-out infinite; }
+.shape.half { width: clamp(50px, 10vw, 110px); aspect-ratio: 2; border-radius: 999px 999px 0 0; background: var(--c4); right: 40%; top: 4%; animation: bob 8s -2s ease-in-out infinite; transform: rotate(-12deg); }
+@keyframes bob { 0%, 100% { transform: translateY(0) rotate(0); } 50% { transform: translateY(-18px) rotate(6deg); } }
+.strips { display: grid; gap: 12px; margin-top: clamp(28px, 6vw, 64px); --th: clamp(140px, 36vw, 300px); -webkit-mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent); mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent); }
+.strip { display: flex; gap: 12px; width: max-content; padding-right: 12px; animation: run var(--dur, 70s) linear infinite; will-change: transform; }
+.strip.b { animation-direction: reverse; }
+.strips:hover .strip { animation-play-state: paused; }
+@keyframes run { to { transform: translateX(-50%); } }
+.tile { flex: none; height: var(--th); padding: 0; border: 0; overflow: hidden; background: var(--surface); position: relative; border-radius: 22px; transition: transform 0.5s var(--ease); }
+.tile.arch { border-radius: 999px 999px 22px 22px; }
+.tile.pill { border-radius: 999px; }
+.tile img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.9s var(--ease); }
+.tile:hover { transform: translateY(-6px); }
+.tile:hover img { transform: scale(1.08); }
+@media (min-width: 900px) {
+  .hero-top { grid-template-columns: 1.1fr 0.9fr; align-items: end; }
+  .hero-top .copy { display: grid; gap: 1.4rem; }
+  .name { font-size: clamp(6rem, 13vw, 13rem); }
+}
+
+/* work */
+.sec { padding-block: clamp(48px, 9vw, 110px); }
+.work-head { display: grid; gap: 1rem; margin-bottom: 1.6rem; }
+.filters { display: flex; gap: 0.5rem; overflow-x: auto; padding-bottom: 0.6rem; margin-inline: -18px; padding-inline: 18px; scrollbar-width: none; }
+.filters::-webkit-scrollbar { display: none; }
+.chip { flex: none; min-height: 44px; padding: 0 1.2rem; background: transparent; border: 2px solid var(--ink); border-radius: 999px; font-size: 0.88rem; font-weight: 700; transition: all 0.3s var(--ease); }
+.chip:hover { transform: translateY(-2px) rotate(-1.5deg); }
+.chip[aria-pressed='true'] { background: var(--ink); color: var(--bg); }
+.blocks { display: grid; gap: clamp(14px, 3vw, 28px); margin-top: 1rem; transition: opacity 0.25s; }
+.blk { --bc: var(--c1); background: var(--bc); color: var(--on-c); border-radius: var(--r); padding: clamp(12px, 2.6vw, 30px); display: grid; gap: clamp(16px, 3vw, 30px); position: relative; overflow: hidden; }
+.blk[data-c='2'] { --bc: var(--c2); }
+.blk[data-c='3'] { --bc: var(--c3); }
+.blk[data-c='4'] { --bc: var(--c4); }
+.blk-media { display: grid; gap: 10px; min-width: 0; }
+.blk-main { position: relative; border-radius: calc(var(--r) - 10px); overflow: hidden; cursor: pointer; background: color-mix(in srgb, var(--ink) 8%, var(--bc)); box-shadow: 0 24px 40px -22px rgba(0, 0, 0, 0.4); }
+.blk-main .ph, .blk-th .ph { transition: transform 1.2s var(--ease), clip-path 1.5s var(--ease); clip-path: inset(0); }
+.blk-main:hover .ph, .blk-th:hover .ph { transform: scale(1.05); }
+.blk.pre:not(.in) .blk-main .ph { clip-path: inset(0 0 100% 0); }
+.blk.pre:not(.in) .blk-th .ph { clip-path: inset(100% 0 0 0); }
+.blk-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.blk-th { position: relative; border-radius: 18px; overflow: hidden; cursor: pointer; background: color-mix(in srgb, var(--ink) 8%, var(--bc)); }
+.blk-th:nth-child(1) { border-radius: 999px 999px 18px 18px; }
+.blk-more { position: absolute; inset: 0; display: grid; place-items: center; background: color-mix(in srgb, var(--ink) 70%, transparent); color: #fff; font-family: var(--f-display); font-weight: 700; font-size: 1.5rem; }
+.blk-info { display: grid; gap: 0.8rem; align-content: center; padding: 6px 6px 10px; min-width: 0; }
+.tag { justify-self: start; padding: 0.3rem 0.85rem; border-radius: 999px; background: var(--ink); color: var(--bg); font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; }
+.blk-info h3 { margin: 0; font-family: var(--f-display); font-weight: 800; letter-spacing: -0.045em; line-height: 0.95; font-size: clamp(2.2rem, 8vw, 4rem); text-wrap: balance; }
+.blk-info p { margin: 0; font-weight: 500; }
+.blk-info .go { margin-top: 0.4rem; justify-self: start; }
+.blk .btn:hover { box-shadow: 0 12px 0 -4px rgba(255, 255, 255, 0.55); }
+@media (min-width: 900px) {
+  .blk { grid-template-columns: 1.55fr 1fr; align-items: center; }
+  .blk:nth-child(even) { grid-template-columns: 1fr 1.55fr; }
+  .blk:nth-child(even) .blk-media { order: 2; }
+  .blk-info { padding: 10px 14px; }
+}
+.empty { padding: 3rem 0; color: var(--muted); }
+
+/* images */
+.ph { position: relative; margin: 0; width: 100%; background: color-mix(in srgb, var(--ink) 7%, var(--bg)); }
+.ph img { width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.8s var(--ease); }
+.ph.on img { opacity: 1; }
+.ph.err::after { content: 'Image unavailable'; position: absolute; inset: 0; display: grid; place-items: center; color: var(--muted); font-size: 0.8rem; }
+.ph:not([style]) { aspect-ratio: 4 / 3; }
+[data-tilt] { transition: transform 0.6s var(--ease); will-change: transform; }
+[data-tilt].tilting { transition: transform 0.08s linear; }
+
+/* about */
+.about { display: grid; gap: 2.6rem; }
+.portrait { position: relative; max-width: 420px; width: 100%; }
+.portrait::before { content: ''; position: absolute; width: 62%; aspect-ratio: 1; border-radius: 50%; background: var(--c2); right: -9%; bottom: -7%; z-index: 0; animation: bob 8s ease-in-out infinite; }
+.portrait::after { content: ''; position: absolute; width: 22%; aspect-ratio: 1; border-radius: 50%; background: var(--c1); left: -6%; top: 6%; z-index: 2; animation: bob 6s -2s ease-in-out infinite; }
+.portrait .ph { position: relative; z-index: 1; border-radius: 999px 999px 30px 30px; overflow: hidden; }
+.hello { display: grid; gap: 1.3rem; align-content: start; }
+.cols { display: grid; gap: 2rem; margin-top: 0.6rem; }
+.cols h3, .sk h3 { margin: 0 0 0.8rem; font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 700; color: var(--muted); }
+.edu { display: grid; gap: 1.1rem; }
+.edu b { display: block; font-weight: 700; font-size: 1.08rem; }
+.edu span { display: block; color: var(--muted); font-size: 0.95rem; }
+.edu em { font-style: normal; font-weight: 700; color: var(--c2); }
+.pills { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.pill { display: inline-flex; padding: 0.55rem 1.05rem; border-radius: 999px; font-weight: 700; font-size: 0.92rem; background: var(--pc, var(--c1)); color: var(--on-c); transition: transform 0.35s var(--ease); }
+.pill:hover { transform: translateY(-3px) rotate(-2deg); }
+.pill:nth-child(4n+1) { --pc: var(--c1); } .pill:nth-child(4n+2) { --pc: var(--c3); } .pill:nth-child(4n+3) { --pc: var(--c2); } .pill:nth-child(4n) { --pc: var(--c4); }
+.pill.line { background: transparent; border: 2px solid var(--ink); color: var(--ink); }
+.sk { display: grid; gap: 2rem; margin-top: 2.4rem; }
+@media (min-width: 860px) { .about { grid-template-columns: 0.8fr 1.2fr; gap: clamp(3rem, 7vw, 7rem); align-items: center; } .cols { grid-template-columns: 1fr 1fr; gap: 3rem; } }
+
+/* contact */
+.contact { background: var(--c1); color: var(--on-c); border-radius: var(--r); padding: clamp(26px, 6vw, 80px); position: relative; overflow: hidden; display: grid; gap: 1.4rem; }
+.contact .shape.sun { background: var(--c2); right: -4%; top: -10%; }
+.contact .shape.arch { background: var(--c3); right: 22%; top: auto; bottom: -8%; }
+.contact .kicker { color: inherit; opacity: 0.7; }
+.contact > * { position: relative; z-index: 1; }
+.contact .shape { z-index: 0; position: absolute; }
+.soc { display: flex; flex-wrap: wrap; gap: 0.7rem; }
+.cgrid { display: grid; gap: 1rem; margin-top: 0.6rem; }
+.cline { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.6rem 1rem; padding: 1rem 0; border-top: 2px solid color-mix(in srgb, var(--on-c) 25%, transparent); }
+.cline .lab { width: 100%; font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 700; opacity: 0.7; }
+.cline .val { font-family: var(--f-display); font-weight: 600; font-size: clamp(1.3rem, 5vw, 2rem); letter-spacing: -0.02em; overflow-wrap: anywhere; user-select: all; -webkit-user-select: all; }
+.contact .btn.ghost { color: var(--on-c); border-color: var(--on-c); }
+.contact .btn.ghost:hover { background: var(--on-c); color: var(--c1); }
+@media (min-width: 860px) { .cgrid { grid-template-columns: 1fr 1fr; gap: 3rem; } }
+.foot { padding-block: 1.6rem calc(1.6rem + 90px); display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between; align-items: center; font-size: 0.85rem; color: var(--muted); }
+.link-btn { background: none; border: 0; padding: 0.6rem 0; font-size: 0.85rem; font-weight: 600; display: inline-flex; align-items: center; gap: 0.4rem; color: inherit; }
+.link-btn:hover { color: var(--ink); }
+@media (min-width: 900px) { .foot { padding-bottom: 1.8rem; } }
+
+/* dock */
+.dock { position: fixed; z-index: 55; left: 50%; bottom: calc(env(safe-area-inset-bottom, 0px) + 12px); transform: translateX(-50%); display: flex; align-items: center; gap: 2px; padding: 6px; border-radius: 999px; background: color-mix(in srgb, var(--bg) 82%, transparent); backdrop-filter: blur(18px) saturate(1.5); -webkit-backdrop-filter: blur(18px) saturate(1.5); border: 2px solid var(--ink); box-shadow: 0 8px 0 -2px var(--ink); max-width: calc(100% - 20px); }
+.dock a { display: grid; justify-items: center; gap: 2px; min-width: 58px; padding: 8px 10px 7px; border-radius: 999px; text-decoration: none; font-size: 0.62rem; letter-spacing: 0.06em; font-weight: 700; transition: background 0.3s, color 0.3s, transform 0.3s var(--ease); }
+.dock a .icon { width: 20px; height: 20px; }
+.dock a[aria-current='true'] { background: var(--ink); color: var(--bg); }
+.dock a:active { transform: scale(0.92); }
+.dock a.wa { background: #1fa35c; color: #fff; margin-left: 4px; }
+@media (min-width: 900px) { .dock { display: none; } }
+.wa-fab { position: fixed; z-index: 46; right: max(18px, env(safe-area-inset-right, 0px)); bottom: 18px; width: 58px; height: 58px; border-radius: 50%; background: #1fa35c; color: #fff; display: none; place-items: center; box-shadow: 0 8px 0 -2px var(--ink); border: 2px solid var(--ink); animation: bob 4s ease-in-out infinite; }
+.wa-fab .icon { width: 28px; height: 28px; }
+@media (min-width: 900px) { .wa-fab { display: grid; } }
+
+/* project page */
+.layer { position: fixed; inset: 0; z-index: 60; background: var(--bg); overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; opacity: 0; visibility: hidden; transform: translateY(6%); transition: opacity 0.45s var(--ease), transform 0.7s var(--ease), visibility 0s 0.7s; }
+.layer.open { opacity: 1; visibility: visible; transform: none; transition: opacity 0.45s var(--ease), transform 0.7s var(--ease), visibility 0s; }
+.sheet-bar { position: sticky; top: 0; z-index: 5; padding-top: calc(env(safe-area-inset-top, 0px) + 10px); padding-bottom: 10px; background: color-mix(in srgb, var(--bg) 86%, transparent); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); }
+.sheet-bar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; }
+.sheet-bar .grp { display: flex; align-items: center; gap: 0.3rem; }
+.sheet-hero { --bc: var(--c1); background: var(--bc); color: var(--on-c); border-radius: var(--r); padding: clamp(22px, 5vw, 64px); margin-top: 8px; display: grid; gap: 1rem; position: relative; overflow: hidden; }
+.sheet-hero[data-c='2'] { --bc: var(--c2); } .sheet-hero[data-c='3'] { --bc: var(--c3); } .sheet-hero[data-c='4'] { --bc: var(--c4); }
+.sheet-hero .kicker { color: inherit; opacity: 0.75; }
+.sheet-hero h2 { font-size: clamp(2.6rem, 11vw, 7rem); }
+.meta { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1rem 1.6rem; margin: 0.6rem 0 0; padding-top: 1.2rem; border-top: 2px solid color-mix(in srgb, var(--on-c) 25%, transparent); }
+.meta dt { font-size: 0.68rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 700; opacity: 0.7; }
+.meta dd { margin: 0.15rem 0 0; font-weight: 600; overflow-wrap: anywhere; }
+.desc { max-width: 60ch; font-size: 1.1rem; margin: 0.4rem 0 0; font-weight: 500; }
+.gal { display: grid; gap: 14px; padding-block: 22px 40px; }
+.gal .ph { border-radius: 20px; overflow: hidden; cursor: zoom-in; }
+.gal .ph img { transition: transform 1s var(--ease), opacity 0.8s; }
+.gal .ph:hover img { transform: scale(1.03); }
+@media (min-width: 800px) { .gal { grid-template-columns: 1fr 1fr; align-items: start; } .gal .ph.wide { grid-column: 1 / -1; } }
+.next { display: grid; gap: 0.6rem; padding-block: 2rem 5rem; }
+.next button { text-align: left; border: 0; padding: clamp(20px, 4vw, 40px); border-radius: var(--r); background: var(--nc, var(--c2)); color: var(--on-c); display: grid; gap: 0.4rem; transition: transform 0.5s var(--ease); }
+.next button:hover { transform: translateY(-4px) rotate(-0.6deg); }
+.next .display { font-size: clamp(2rem, 8vw, 4.6rem); }
+.lb { position: fixed; inset: 0; z-index: 85; background: rgba(14, 12, 24, 0.96); display: grid; grid-template-rows: auto 1fr auto; opacity: 0; visibility: hidden; transition: opacity 0.35s, visibility 0s 0.35s; color: #f6f1ff; touch-action: pan-y; }
+.lb.open { opacity: 1; visibility: visible; transition: opacity 0.35s; }
+.lb-top, .lb-bot { display: flex; align-items: center; justify-content: space-between; padding: calc(env(safe-area-inset-top, 0px) + 10px) max(14px, env(safe-area-inset-right, 0px)) 8px max(14px, env(safe-area-inset-left, 0px)); font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; }
+.lb-bot { padding: 8px max(14px, env(safe-area-inset-right, 0px)) calc(env(safe-area-inset-bottom, 0px) + 12px) max(14px, env(safe-area-inset-left, 0px)); justify-content: center; gap: 1rem; }
+.lb-stage { display: grid; place-items: center; overflow: hidden; min-height: 0; }
+.lb-stage img { max-width: 100%; max-height: 100%; object-fit: contain; user-select: none; -webkit-user-drag: none; animation: fadeUp 0.4s var(--ease); }
+.lb .ib { color: #f6f1ff; }
+.toast { position: fixed; z-index: 120; left: 50%; top: calc(env(safe-area-inset-top, 0px) + 14px); transform: translate(-50%, -160%); background: var(--ink); color: var(--bg); padding: 0.7rem 1.2rem; border-radius: 999px; font-size: 0.9rem; font-weight: 600; transition: transform 0.5s var(--ease); max-width: calc(100% - 28px); text-align: center; }
+.toast.show { transform: translate(-50%, 0); }
+.modal { position: fixed; inset: 0; z-index: 110; background: rgba(20, 16, 30, 0.6); display: none; place-items: center; padding: 20px; }
+.modal.open { display: grid; }
+.modal-card { background: var(--bg); border: 2px solid var(--ink); border-radius: 26px; padding: 1.6rem; max-width: 440px; display: grid; gap: 1rem; box-shadow: 0 10px 0 -2px var(--ink); }
+.modal-card h3 { font-family: var(--f-display); font-size: 1.7rem; letter-spacing: -0.03em; margin: 0; }
+.modal-card p { margin: 0; color: var(--muted); }
+
+/* admin */
+.adm { position: fixed; inset: 0; z-index: 75; background: var(--bg); display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: auto auto 1fr; overflow: hidden; opacity: 0; visibility: hidden; transform: translateY(3%); transition: opacity 0.35s var(--ease), transform 0.5s var(--ease), visibility 0s 0.5s; }
+.adm.open { opacity: 1; visibility: visible; transform: none; transition: opacity 0.35s var(--ease), transform 0.5s var(--ease), visibility 0s; }
+.adm-bar { display: flex; align-items: center; justify-content: space-between; gap: 0.8rem; padding-top: calc(env(safe-area-inset-top, 0px) + 10px); padding-bottom: 10px; border-bottom: 2px solid var(--ink); }
+.adm-bar h2 { font-family: var(--f-display); font-weight: 800; letter-spacing: -0.03em; font-size: 1.35rem; margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+.adm-bar .grp { display: flex; align-items: center; gap: 0.5rem; }
+.dot { width: 10px; height: 10px; border-radius: 50%; background: var(--line); display: inline-block; }
+.dot.on { background: var(--c2); box-shadow: 0 0 0 4px color-mix(in srgb, var(--c2) 30%, transparent); }
+.tabs { display: flex; gap: 0.3rem; border-bottom: 1px solid var(--line); overflow-x: auto; scrollbar-width: none; }
+.tab { background: none; border: 0; border-bottom: 3px solid transparent; padding: 0.9rem 1rem; font-size: 0.9rem; font-weight: 700; color: var(--muted); white-space: nowrap; }
+.tab[aria-selected='true'] { color: var(--ink); border-color: var(--c2); }
+.adm-main { overflow-y: auto; overscroll-behavior: contain; padding-block: 1.4rem calc(env(safe-area-inset-bottom, 0px) + 6rem); }
+.adm-in, .form, .plist, .help { display: grid; gap: 1.1rem; min-width: 0; grid-template-columns: minmax(0, 1fr); }
+.adm-in { max-width: 980px; margin-inline: auto; }
+.stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.7rem; }
+.stat { border: 2px solid var(--ink); border-radius: 18px; padding: 0.8rem; min-width: 0; }
+.stat b { display: block; font-family: var(--f-display); font-weight: 800; font-size: 1.7rem; letter-spacing: -0.03em; line-height: 1.1; }
+.stat span { font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; color: var(--muted); }
+.meter { height: 5px; background: var(--line); border-radius: 5px; overflow: hidden; margin-top: 0.4rem; }
+.meter i { display: block; height: 100%; background: var(--c2); }
+.prow { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 0.9rem; align-items: center; border: 2px solid var(--ink); border-radius: 20px; padding: 0.7rem; background: var(--bg); }
+.prow .th { width: 64px; height: 64px; border-radius: 14px; overflow: hidden; background: var(--surface); }
+.prow .th img { width: 100%; height: 100%; object-fit: cover; }
+.prow .tt { min-width: 0; }
+.prow .tt b { display: block; font-weight: 700; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.prow .tt span { color: var(--muted); font-size: 0.82rem; }
+.prow .acts { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+@media (min-width: 720px) { .prow { grid-template-columns: 64px minmax(0, 1fr) auto; } .prow .acts { grid-column: auto; } }
+.two { display: grid; gap: 1.1rem; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 720px) { .two { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.fld { display: grid; gap: 0.4rem; }
+.fld > span { font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+.fld input, .fld textarea { width: 100%; background: var(--surface); border: 2px solid var(--line); color: var(--ink); border-radius: 14px; padding: 0.8rem 0.95rem; font: inherit; font-size: 16px; }
+.fld textarea { min-height: 110px; resize: vertical; line-height: 1.5; }
+.fld input:focus, .fld textarea:focus { outline: none; border-color: var(--ink); }
+.fld small { color: var(--muted); font-size: 0.82rem; }
+.sec-t { font-family: var(--f-display); font-weight: 800; letter-spacing: -0.03em; font-size: 1.5rem; margin: 0.8rem 0 0; }
+.drop { display: grid; place-items: center; text-align: center; gap: 0.3rem; padding: 1.6rem 1rem; border: 2px dashed var(--ink); border-radius: 22px; cursor: pointer; transition: background 0.3s; }
+.drop:hover, .drop.over { background: color-mix(in srgb, var(--c1) 35%, transparent); }
+.drop input { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+.drop b { font-weight: 700; }
+.drop span { color: var(--muted); font-size: 0.85rem; }
+.thumbs { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 0.8rem; }
+.thumb { position: relative; border: 2px solid var(--line); border-radius: 16px; overflow: hidden; background: var(--bg); display: grid; }
+.thumb .ph { aspect-ratio: 4 / 3 !important; }
+.thumb.cover { border-color: var(--c2); }
+.thumb .cv { position: absolute; top: 6px; left: 6px; background: var(--c2); color: var(--on-c); font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.2rem 0.55rem; border-radius: 999px; font-weight: 800; }
+.thumb .tb { display: flex; justify-content: space-between; padding: 0.25rem; }
+.tbtn { width: 36px; height: 36px; display: grid; place-items: center; background: none; border: 0; border-radius: 10px; }
+.tbtn:hover { background: var(--line); }
+.tbtn[disabled] { opacity: 0.3; pointer-events: none; }
+.upl { display: grid; gap: 0.4rem; }
+.upl div { font-size: 0.85rem; color: var(--muted); display: flex; gap: 0.6rem; align-items: center; }
+.spin { width: 14px; height: 14px; border: 2px solid var(--line); border-top-color: var(--c2); border-radius: 50%; animation: sp 0.8s linear infinite; }
+@keyframes sp { to { transform: rotate(360deg); } }
+.edu-ed { display: grid; gap: 0.6rem; border: 2px solid var(--line); border-radius: 18px; padding: 0.9rem; }
+.theme-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 180px), 1fr)); gap: 0.8rem; }
+.theme-card { border: 2px solid var(--line); border-radius: 18px; padding: 0.8rem; display: grid; gap: 0.5rem; background: var(--bg); text-align: left; }
+.theme-card[aria-pressed='true'] { border-color: var(--ink); box-shadow: 0 6px 0 -2px var(--ink); }
+.theme-card .prev { height: 54px; border-radius: 12px; display: grid; grid-template-columns: 2fr repeat(4, 1fr); overflow: hidden; border: 1px solid var(--line); }
+.theme-card .prev i { background: var(--c); }
+.theme-card b { font-weight: 700; font-size: 0.92rem; }
+.color-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); gap: 0.8rem; }
+.color-row label { display: grid; gap: 0.3rem; font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; color: var(--muted); }
+.color-row input[type='color'] { width: 100%; height: 48px; border: 2px solid var(--line); border-radius: 12px; background: var(--bg); padding: 3px; }
+.switch { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.9rem 1rem; border: 2px solid var(--line); border-radius: 16px; }
+.switch span { display: grid; gap: 0.1rem; font-weight: 700; }
+.switch small { color: var(--muted); font-weight: 400; }
+.switch input { width: 48px; height: 28px; appearance: none; -webkit-appearance: none; background: var(--line); border-radius: 999px; position: relative; transition: background 0.3s; cursor: pointer; flex: none; border: 0; }
+.switch input::after { content: ''; position: absolute; top: 3px; left: 3px; width: 22px; height: 22px; border-radius: 50%; background: #fff; transition: transform 0.3s var(--ease); box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); }
+.switch input:checked { background: var(--c3); }
+.switch input:checked::after { transform: translateX(20px); }
+.swatches { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.swatches button { min-width: 44px; height: 44px; border-radius: 50%; border: 3px solid transparent; outline: 2px solid var(--line); background: var(--c); font-size: 0.7rem; font-weight: 700; padding: 0 0.7rem; }
+.swatches button.auto { border-radius: 999px; background: var(--surface); }
+.swatches button[aria-pressed='true'] { outline-color: var(--ink); border-color: var(--bg); }
+.note { padding: 0.9rem 1rem; border: 2px dashed var(--ink); border-radius: 16px; color: var(--muted); font-size: 0.92rem; margin: 0; }
+.help ol { padding-left: 1.2rem; display: grid; gap: 0.7rem; }
+.pubbar { position: fixed; z-index: 78; left: 50%; bottom: calc(env(safe-area-inset-bottom, 0px) + 14px); transform: translate(-50%, 170%); display: flex; align-items: center; gap: 0.8rem; background: var(--c1); color: var(--on-c); border: 2px solid var(--ink); border-radius: 999px; padding: 0.4rem 0.45rem 0.4rem 1.2rem; box-shadow: 0 8px 0 -2px var(--ink); transition: transform 0.5s var(--ease); max-width: calc(100% - 24px); font-size: 0.88rem; font-weight: 700; white-space: nowrap; }
+.pubbar.show { transform: translate(-50%, 0); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-delay: 0s !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+  .strip { animation: none; }
+  .name .ln > span { transform: none; }
+  .hero-tag, .cta { opacity: 1; }
+  [data-rv].pre { opacity: 1; transform: none; }
+  .blk.pre:not(.in) .ph { clip-path: none; }
+}
+
+html { overflow-x: clip; }
+.hero, .sec, main { overflow-x: clip; }
+.filters { margin-inline: 0; padding-inline: 0; }
+.blk-th { aspect-ratio: 1 / 1.1; }
+.blk-th .ph { position: absolute; inset: 0; width: 100%; height: 100%; aspect-ratio: auto !important; }
+.blk-th .ph img { width: 100%; height: 100%; object-fit: cover; }
+.shape.arch { top: -8% !important; }
+
+/* ---- Studio look: dark/clean surfaces, one accent ---- */
+:root { --on-acc: #0b0f1a; }
+.btn { background: var(--accent); border-color: var(--accent); color: var(--on-acc); }
+.btn:hover { filter: brightness(1.08); }
+.btn.ghost { background: transparent; color: var(--ink); border-color: color-mix(in srgb, var(--ink) 28%, transparent); }
+.btn.ghost:hover { background: color-mix(in srgb, var(--ink) 10%, transparent); color: var(--ink); }
+.btn.wa { background: #1fa35c; border-color: #1fa35c; color: #fff; }
+.btn.danger { background: transparent; color: var(--danger); border-color: var(--danger); }
+.brand::before { background: var(--accent); box-shadow: 0 0 18px var(--accent); width: 10px; height: 10px; margin-right: 12px; }
+.hl { background: none; color: var(--accent); }
+.tag, .thumb .cv { background: color-mix(in srgb, var(--accent) 16%, transparent); color: var(--accent); border: 1px solid color-mix(in srgb, var(--accent) 45%, transparent); }
+.blk, .sheet-hero, .contact, .next button { background: var(--c1); color: var(--ink); border: 1px solid var(--line); }
+.blk[data-c], .sheet-hero[data-c] { --bc: var(--c1); }
+.blk { transition: border-color .4s, transform .5s var(--ease); }
+.blk:hover { border-color: color-mix(in srgb, var(--accent) 55%, transparent); }
+.blk-main, .blk-th { background: var(--surface); box-shadow: none; }
+.pill, .pill:nth-child(n) { background: var(--c1); color: var(--ink); border: 1px solid var(--line); font-weight: 500; }
+.pill.line { background: transparent; border: 1px solid color-mix(in srgb, var(--accent) 50%, transparent); color: var(--ink); }
+.dock a[aria-current='true'] { background: var(--accent); color: var(--on-acc); }
+.shape.sun { background: radial-gradient(circle at 35% 35%, var(--accent), color-mix(in srgb, var(--accent) 30%, transparent)); opacity: .85; filter: blur(.5px); }
+.shape.arch { background: transparent; border: 2px solid var(--accent); }
+.shape.dot { background: var(--accent); }
+.shape.half { background: var(--c1); border: 1px solid var(--line); }
+.contact .shape.sun { background: var(--accent); opacity: .18; }
+.contact .shape.arch { border-color: var(--accent); opacity: .5; }
+.contact .btn.ghost { color: var(--ink); border-color: color-mix(in srgb, var(--ink) 28%, transparent); }
+.contact .btn.ghost:hover { background: color-mix(in srgb, var(--ink) 10%, transparent); color: var(--ink); }
+.cline { border-top: 1px solid var(--line); }
+.meta { border-top: 1px solid var(--line); }
+.chip[aria-pressed='true'] { background: var(--accent); border-color: var(--accent); color: var(--on-acc); }
+.dock { background: color-mix(in srgb, var(--c1) 88%, transparent); border: 1px solid var(--line); color: var(--ink); box-shadow: 0 14px 34px -10px rgba(0,0,0,.55); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); }
+.dock a { color: var(--ink); }
+.dock a.wa { background: #1fa35c; color: #fff; }
+.top { background: color-mix(in srgb, var(--bg) 82%, transparent); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+.contact .shape.arch { display: none; } @media (min-width: 900px) { .contact .shape.arch { display: block; } }
+
+/* ---- Live background ---- */
+.live { position: fixed; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; }
+.live i { position: absolute; width: 60vmax; height: 60vmax; border-radius: 50%; filter: blur(80px); opacity: .28; will-change: transform; }
+.live i:nth-child(1) { background: var(--accent); left: -20vmax; top: -18vmax; animation: drift1 26s ease-in-out infinite alternate; }
+.live i:nth-child(2) { background: color-mix(in srgb, var(--accent) 45%, #6a5cff); right: -24vmax; top: 30vh; opacity: .2; animation: drift2 32s ease-in-out infinite alternate; }
+.live i:nth-child(3) { background: color-mix(in srgb, var(--accent) 60%, var(--ink)); left: 10vw; bottom: -34vmax; opacity: .14; animation: drift3 38s ease-in-out infinite alternate; }
+.live::after { content: ''; position: absolute; inset: 0; background-image: radial-gradient(color-mix(in srgb, var(--ink) 14%, transparent) 1px, transparent 1.4px); background-size: 34px 34px; mask-image: radial-gradient(ellipse at 50% 30%, #000 10%, transparent 75%); -webkit-mask-image: radial-gradient(ellipse at 50% 30%, #000 10%, transparent 75%); opacity: .5; }
+@keyframes drift1 { to { transform: translate(28vmax, 22vmax) scale(1.15); } }
+@keyframes drift2 { to { transform: translate(-30vmax, -14vmax) scale(.9); } }
+@keyframes drift3 { to { transform: translate(24vmax, -20vmax) scale(1.2); } }
+body, .hero, .sec, main { background-color: transparent; }
+/* ---- Glow border ---- */
+@property --ang { syntax: '<angle>'; inherits: false; initial-value: 0deg; }
+.blk, .contact, .sheet-hero { position: relative; }
+.blk::before, .contact::before, .sheet-hero::before { content: ''; position: absolute; inset: 0; border-radius: inherit; padding: 1.5px; pointer-events: none; z-index: 3;
+  background: conic-gradient(from var(--ang), transparent 0 55%, color-mix(in srgb, var(--accent) 35%, transparent) 70%, var(--accent) 85%, #fff 90%, transparent 95%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+  animation: spin 7s linear infinite; }
+.blk::after { content: ''; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; box-shadow: 0 0 40px -12px var(--accent); opacity: .5; transition: opacity .4s; z-index: 0; }
+.blk:hover::after { opacity: 1; }
+.blk:nth-child(even)::before { animation-direction: reverse; animation-duration: 9s; }
+@keyframes spin { to { --ang: 360deg; } }
+.tile { box-shadow: 0 0 0 1px color-mix(in srgb, var(--accent) 35%, transparent), 0 10px 30px -12px color-mix(in srgb, var(--accent) 50%, transparent); }
+
+.tile, .tile.arch, .tile.pill, .blk-th, .blk-th:nth-child(n), .blk-th .ph { border-radius: 18px !important; }
+.tile { box-shadow: 0 0 0 1px var(--line); }
+
+/* ---- story, compare ---- */
+.story { display: grid; gap: 1.2rem; padding-top: 1.2rem; border-top: 1px solid var(--line); }
+.story-grid { display: grid; gap: 1rem 2rem; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); }
+.story h4 { margin: 0 0 .3rem; font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); font-family: var(--f-body); }
+.story p { margin: 0; line-height: 1.6; }
+.tools { display: flex; flex-wrap: wrap; align-items: center; gap: .45rem; }
+.tools span { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-right: .3rem; }
+.tools em { font-style: normal; font-size: .85rem; padding: .3rem .8rem; border-radius: 999px; border: 1px solid color-mix(in srgb, var(--accent) 45%, transparent); }
+.cmp-wrap { margin-top: 14px; }
+.cmp { position: relative; overflow: hidden; border-radius: 22px; border: 1px solid var(--line); background: var(--surface); user-select: none; -webkit-user-select: none; touch-action: pan-y; }
+.cmp img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.cmp img.top { clip-path: inset(0 calc(100% - var(--pos)) 0 0); }
+.cmp .bar { position: absolute; top: 0; bottom: 0; left: var(--pos); width: 2px; margin-left: -1px; background: var(--accent); box-shadow: 0 0 16px var(--accent); pointer-events: none; }
+.cmp .bar b { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 44px; height: 44px; border-radius: 50%; background: var(--accent); color: var(--on-acc); display: grid; place-items: center; grid-auto-flow: column; }
+.cmp .bar .icon { width: 14px; height: 14px; }
+.cmp .lab { position: absolute; top: 12px; padding: .25rem .7rem; border-radius: 999px; font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; background: rgba(8,10,16,.7); color: #fff; backdrop-filter: blur(6px); }
+.cmp .lab.l { left: 12px; } .cmp .lab.r { right: 12px; }
+.cmp input[type=range] { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: ew-resize; margin: 0; }
+select { width: 100%; min-height: 48px; padding: 0 .8rem; border-radius: 14px; border: 1px solid var(--line); background: var(--bg); color: var(--ink); font: inherit; }
+.cmp .bar b { display: flex; gap: 0; align-items: center; justify-content: center; } .cmp .bar .icon { width: 12px; height: 12px; margin: 0 -1px; }
+.portrait .ph { border-radius: 22px !important; } .portrait::before, .portrait::after { display: none; }
+</style><div id="root"></div><script type="application/json" id="state">{"v": 1, "profile": {"name": "Muskan Pandit", "role": "Interior design", "year": "2026", "tagline": "Designing spaces where function and emotion meet.", "quote": "Designing spaces where function and emotion meet.", "bio": "Interior design student with a strong interest in residential space planning, visualization and material selection. Skilled in AutoCAD, Photoshop, Illustrator and 3ds Max, with growing expertise in 3D visualization and lighting. Passionate about creating functional, aesthetic spaces while building industry-standard design workflows through practical projects.", "email": "muskanpandit0421@gmail.com", "phone": "+91 8076 922 482", "portrait": {"id": "784395ce2a864e83c665865831a20837", "w": 808, "h": 787, "alt": "Muskan Pandit"}, "education": [{"title": "Diploma in Interior Design", "place": "Jama Institute: Graphic | Fashion | Interior | Animation | VFX | Web Designing", "years": "(2025–2026)"}, {"title": "Bachelor of Arts (English Honours)", "place": "Indra Gandhi National Open University", "years": "(2021–2026)"}], "software": ["SketchUp", "CorelDRAW", "AutoCAD", "V-Ray", "3ds Max", "Photoshop", "Illustrator", "Excel (Basics)"], "designSkills": ["Space planning", "Furniture layout", "Concept development", "3D visualization", "Material selection", "Mood boards", "Color theory application", "Painting", "Sketching", "Interior styling"], "interests": ["Residential interiors", "Contemporary spaces", "Material & texture exploration", "Lighting and atmosphere"], "social": {"whatsapp": "918076922482", "instagram": ""}, "resume": {"id": "dce12f70045f2e3449291f978be2e2c5", "name": "Muskan Pandit Resume"}}, "theme": {"preset": "sunny", "custom": null}, "projects": [{"id": "living-dining", "title": "Living & Dining Views", "series": "Project 01", "category": "3D visualization", "type": "Residential interior", "year": "2026", "space": "Living, dining and kitchen entry", "client": "", "scope": "3D visualization, lighting, material selection", "desc": "The dining area works as a visual link between the living room and the kitchen. Warm lighting, decorative wall panels and an open layout make a comfortable setting for everyday meals and gatherings while keeping a clear connection to the rooms beside it.", "cover": "50c08cb17e996beb995f93e4b5c9ec7a", "images": [{"id": "50c08cb17e996beb995f93e4b5c9ec7a", "w": 2000, "h": 1125, "alt": "Living room with fluted TV wall and dining area"}, {"id": "a1a353fff88e7ecaab0392f043fdd90f", "w": 1800, "h": 1013, "alt": "Living room seating with ribbed wall panels and curtains"}, {"id": "88374a71349e01a71224b4f3ba4c1551", "w": 1351, "h": 777, "alt": "Dining table with yellow chairs and decorative wall"}, {"id": "1f7f54341f7f3e51adcbd34ef32ff1a3", "w": 695, "h": 1502, "alt": "Wood framed archway into the kitchen"}, {"id": "5bf717fd1f1af9a51f570dcb3bbdf641", "w": 1207, "h": 1850, "alt": "Sofa and window wall"}], "feature": true, "color": 0}, {"id": "bedroom-01", "title": "Primary Bedroom", "series": "Project 01", "category": "Bedroom", "type": "Residential interior", "year": "2026", "space": "Primary bedroom", "client": "", "scope": "Concept, wall treatment, lighting, storage", "desc": "A primary bedroom concept with vertical panel lighting, warm wood textures and integrated storage. A gold botanical wall piece sits above the bed between two slatted panels.", "cover": "23eb64c85b6593ed50d4a85302dcfcbf", "images": [{"id": "23eb64c85b6593ed50d4a85302dcfcbf", "w": 1900, "h": 1440, "alt": "Bedroom with slatted wood panels and gold wall art"}, {"id": "de3b73e8b00d9d9e34698497f1771b43", "w": 1166, "h": 890, "alt": "Bedroom with arched wall niches"}, {"id": "37787aca5ef613e4f1419c9c0d6a7e78", "w": 467, "h": 577, "alt": "Wardrobe and dresser wall"}, {"id": "0ba025c4ae06610b258beff2138efcbf", "w": 660, "h": 577, "alt": "Stone feature wall with TV unit"}], "feature": true, "color": 0}, {"id": "kitchen-01", "title": "Modular Kitchen", "series": "Project 01", "category": "Kitchen", "type": "Residential interior", "year": "2026", "space": "Kitchen", "client": "", "scope": "Layout planning, cabinetry, lighting", "desc": "A compact U-shaped kitchen planned for an efficient workflow and storage. Soft pastel cabinetry, warm under-cabinet lighting and integrated appliances give a clean contemporary room that balances function with warmth.", "cover": "7b99661beb1a942c7f0da5ee40b7072b", "images": [{"id": "7b99661beb1a942c7f0da5ee40b7072b", "w": 1215, "h": 1364, "alt": "U-shaped kitchen with pastel cabinets"}, {"id": "ac71d11f5109390416132ba6d57fb70d", "w": 1800, "h": 2269, "alt": "Tall units with built-in oven and refrigerator"}], "feature": true, "color": 0}, {"id": "bedroom-02", "title": "Calm Botanical Bedroom", "series": "Project 02", "category": "Bedroom", "type": "Residential interior", "year": "2026", "space": "Bedroom", "client": "Mr. Munish", "scope": "Concept, wall niche, lighting", "desc": "A calm and balanced bedroom built from soft tones, natural textures and layered lighting. An arched wall niche with botanical artwork forms a quiet focal point behind the bed, while warm wood accents and integrated lighting add depth and comfort.", "cover": "1784b060d426da947909783e44ceb946", "images": [{"id": "1784b060d426da947909783e44ceb946", "w": 1595, "h": 1289, "alt": "Bedroom with botanical wallpaper and pendant lights"}, {"id": "38e9d2490b6283c57f457dbce4fa6eab", "w": 1800, "h": 1052, "alt": "Arched wood niche with botanical mural"}], "feature": true, "color": 0}, {"id": "washroom-02", "title": "Washroom Designs", "series": "Project 02", "category": "Washroom", "type": "Residential interior", "year": "2026", "space": "Washrooms", "client": "Mr. Munish", "scope": "Tile selection, layout, storage, lighting", "desc": "Patterned tiles paired with clean marble surfaces for a balanced, elegant space. Contrasting textures mark the shower area while the rest of the layout stays calm and functional, with soft lighting, built-in storage and minimal fittings.", "cover": "704e4563dfc582bdd5a7d41c43370769", "images": [{"id": "704e4563dfc582bdd5a7d41c43370769", "w": 1346, "h": 1362, "alt": "Washroom with navy border tile and terrazzo floor"}, {"id": "944e07746cd13625fa2268af912b0557", "w": 1375, "h": 1322, "alt": "Shower with blue onyx tile and mirror cabinet"}, {"id": "1433be153d814ed79ca2a1d7e8a87124", "w": 1190, "h": 1115, "alt": "Wall hung toilet with built-in shelving"}], "feature": true, "color": 0}, {"id": "kitchen-02", "title": "Modular Kitchen II", "series": "Project 02", "category": "Kitchen", "type": "Residential interior", "year": "2026", "space": "Kitchen", "client": "Mr. Munish", "scope": "Layout planning, cabinetry, lighting", "desc": "A second compact U-shaped kitchen in soft pastel cabinetry with timber open niches, a marble backsplash and warm under-cabinet lighting for a clean contemporary finish.", "cover": "cd02771e0c9ff2e9fe92e73ab96feca9", "images": [{"id": "cd02771e0c9ff2e9fe92e73ab96feca9", "w": 1900, "h": 1457, "alt": "U-shaped kitchen with timber niches"}, {"id": "d3a756b819ae16d39ded8df6d76c502c", "w": 1024, "h": 1174, "alt": "Kitchen with refrigerator and marble backsplash"}], "feature": true, "color": 0}, {"id": "wardrobe-jitender", "title": "Master Bedroom Wardrobe", "series": "Project 01", "category": "Technical drawings", "type": "Residential interior", "year": "2026", "space": "Master bedroom wardrobe", "client": "Mr. Jitender", "scope": "Wardrobe design and storage planning", "desc": "A wardrobe designed around practical storage and a clean internal layout. Hanging space, drawers and shelves keep clothing and accessories organised and easy to reach. Layouts were drawn for the master bedroom, the parents’ room and the kids’ room so each suits how its user lives.", "cover": "e1e7f8f39f77544dea5263309fac65bd", "images": [{"id": "e1e7f8f39f77544dea5263309fac65bd", "w": 1800, "h": 1314, "alt": "Master bedroom wardrobe plan, external elevation and internal layout"}, {"id": "695f1b520153166b22ae46124e6953b0", "w": 1566, "h": 1421, "alt": "Parents’ bedroom wardrobe elevations"}, {"id": "261398f5c3bd7a0ae85acbf357e25ff1", "w": 1694, "h": 1306, "alt": "Kids’ bedroom wardrobe elevations"}], "feature": false, "color": 0}, {"id": "kids-wardrobe-munish", "title": "Kids Room & Wardrobe Planning", "series": "Project 02", "category": "Technical drawings", "type": "Residential interior", "year": "2026", "space": "Bedroom wardrobe", "client": "Mr. Munish", "scope": "Floor, bedroom, wardrobe and storage planning", "desc": "Floor planning and wardrobe design for a family apartment. The kids’ room combines a bed, study corner, book shelf and a niche wardrobe, while the master bedroom wardrobe balances loft, hanging and drawer storage.", "cover": "252f9f4f4b8ffb580bd73c654005e636", "images": [{"id": "252f9f4f4b8ffb580bd73c654005e636", "w": 1900, "h": 1787, "alt": "Furnished apartment plan with parents, kids and master bedrooms"}, {"id": "9dabb767fc78dc6fc12af300f70ff4bd", "w": 1490, "h": 1000, "alt": "Kids bedroom plan with study and wardrobe"}, {"id": "6153218fd6241a9d645ae49492dc3d53", "w": 1900, "h": 814, "alt": "Bedroom wardrobe external and internal elevations"}, {"id": "bd7461c6e11eccf9b950b5f7ce027d5d", "w": 1046, "h": 947, "alt": "Kids niche wardrobe elevations"}, {"id": "d58483754379ac4476442d801a383b6b", "w": 958, "h": 1946, "alt": "Master bedroom wardrobe elevation"}], "feature": false, "color": 0}, {"id": "plans-academic", "title": "Floor Plans & Ceiling Layouts", "series": "Academic work", "category": "Technical drawings", "type": "Studio exercise", "year": "2026", "space": "Residential plans", "client": "", "scope": "AutoCAD drafting, furniture blocks, ceiling plans", "desc": "Studio exercises and technical drawings completed during my interior design studies: apartment plans with room dimensions, ground and first floor plans with ceiling designs, and a library of furniture plan and elevation blocks.", "cover": "10e23f638e2fd11141e2a56c2c8ae0ec", "images": [{"id": "10e23f638e2fd11141e2a56c2c8ae0ec", "w": 1900, "h": 1340, "alt": "Two bedroom apartment plan"}, {"id": "84f57b922cb5c909d5b1bfbd3704597c", "w": 2000, "h": 689, "alt": "Ground and first floor plans with ceiling layouts"}, {"id": "e3e6b249c98f6b94c88d65171029e58f", "w": 1800, "h": 903, "alt": "Furniture plan and elevation blocks"}], "feature": false, "color": 0}, {"id": "moodboards-academic", "title": "Moodboards", "series": "Academic work", "category": "Moodboards", "type": "Concept study", "year": "2026", "space": "Kitchens, facades and interiors", "client": "", "scope": "Concept development, colour and material exploration", "desc": "Classroom explorations of colour, material and atmosphere: kitchen palettes from timber to blue and orange, contemporary house facades with arches and warm lighting, and interior moods for bedrooms, living rooms and retail.", "cover": "b8b7df8f41168cc73d0fe2a3abf2c5bb", "images": [{"id": "b8b7df8f41168cc73d0fe2a3abf2c5bb", "w": 2000, "h": 1344, "alt": "Interior moodboard"}, {"id": "2fb17fd381cbac532d5d01a06834ef74", "w": 2000, "h": 1409, "alt": "Kitchen moodboard"}, {"id": "ffb2c71f27c986bedfadbe2c9e580d80", "w": 2000, "h": 1411, "alt": "Facade moodboard"}], "feature": false, "color": 0}]}</script><script>window.__MODE="admin"</script><script id="app-js">(function () {
+  'use strict';
+  const SK = "<!doctype html><html><head><meta charset=utf8><meta name=viewport content=\"width=device-width,initial-scale=1,viewport-fit=cover\"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>\n";
+  const HEAD_TAGS = "<title>Muskan Pandit Interiors</title><meta name=\"claude:viewport-fit-sides\" content=\"cover\"><meta name=\"description\" content=\"Interior design portfolio of Muskan Pandit: residential interiors, wardrobe planning, kitchens, bedrooms and 3D visualization.\"><link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:wght@400;500;700&display=swap\">";
+  const S = JSON.parse(document.getElementById('state').textContent);
+  const MODE = window.__MODE || 'artifact';
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const fine = matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+  /* ---------- helpers ---------- */
+  const $ = (s, r) => (r || document).querySelector(s);
+  const $$ = (s, r) => Array.from((r || document).querySelectorAll(s));
+  function h(tag, props, ...kids) {
+    const e = document.createElement(tag);
+    for (const k in props || {}) {
+      const v = props[k];
+      if (v == null || v === false) continue;
+      if (k === 'class') e.className = v;
+      else if (k === 'style') e.style.cssText = v;
+      else if (k.slice(0, 2) === 'on') e.addEventListener(k.slice(2), v);
+      else if (k === 'for') e.htmlFor = v;
+      else if (k === 'value' || k === 'checked' || k === 'disabled' || k === 'hidden') e[k] = v;
+      else e.setAttribute(k, v === true ? '' : v);
+    }
+    kids.forEach(c => add(e, c));
+    return e;
+  }
+  function add(e, c) {
+    if (c == null || c === false) return;
+    if (Array.isArray(c)) { c.forEach(x => add(e, x)); return; }
+    e.append(c.nodeType ? c : document.createTextNode(String(c)));
+  }
+  const ICONS = {
+    download: '<path d="M12 4v11M7 11l5 5 5-5M5 20h14"/>',
+    close: '<path d="M6 6l12 12M18 6L6 18"/>', left: '<path d="M15 5l-7 7 7 7"/>', right: '<path d="M9 5l7 7-7 7"/>',
+    up: '<path d="M5 15l7-7 7 7"/>', down: '<path d="M5 9l7 7 7-7"/>', arrow: '<path d="M5 12h14M13 6l6 6-6 6"/>',
+    copy: '<rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/>', plus: '<path d="M12 5v14M5 12h14"/>',
+    edit: '<path d="M4 20h4L19 9l-4-4L4 16v4zM13.5 6.5l4 4"/>', trash: '<path d="M4 7h16M9 7V4h6v3M6 7l1 13h10l1-13"/>',
+    lock: '<rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/>',
+    star: '<path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/>',
+    img: '<rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="M21 16l-5-5-9 9"/>',
+    eye: '<path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>',
+    home: '<path d="M4 11l8-7 8 7v9a1 1 0 0 1-1 1h-4v-6h-6v6H5a1 1 0 0 1-1-1v-9z"/>',
+    grid: '<rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/>',
+    user: '<circle cx="12" cy="8" r="4"/><path d="M4.5 20c.8-4 3.8-6 7.5-6s6.7 2 7.5 6"/>',
+    mail: '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 7l8.5 6 8.5-6"/>',
+    whatsapp: '<path d="M3 21l1.6-4.8A8.5 8.5 0 1 1 8 19.5L3 21z"/><path d="M9 8.5c.2 2.6 3.4 5.8 6 6l1.2-1.4-2-1-.9.7a4 4 0 0 1-2.1-2.1l.7-.9-1-2L9 8.5z"/>',
+    instagram: '<rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6"/>'
+  };
+  function ic(name) {
+    const s = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    s.setAttribute('viewBox', '0 0 24 24'); s.setAttribute('class', 'icon'); s.setAttribute('aria-hidden', 'true');
+    s.innerHTML = ICONS[name] || ''; return s;
+  }
+  const uid = () => Math.random().toString(36).slice(2, 9);
+  const IMGMAP = {"e3e6b249c98f6b94c88d65171029e58f": "/images/acad-furn.jpg", "10e23f638e2fd11141e2a56c2c8ae0ec": "/images/acad-plan-1.jpg", "84f57b922cb5c909d5b1bfbd3704597c": "/images/acad-plan-2.jpg", "de3b73e8b00d9d9e34698497f1771b43": "/images/bedroom-b.jpg", "37787aca5ef613e4f1419c9c0d6a7e78": "/images/bedroom-c.jpg", "0ba025c4ae06610b258beff2138efcbf": "/images/bedroom-d.jpg", "23eb64c85b6593ed50d4a85302dcfcbf": "/images/bedroom-main.jpg", "1784b060d426da947909783e44ceb946": "/images/bedroom2-main.jpg", "38e9d2490b6283c57f457dbce4fa6eab": "/images/bedroom2-niche.jpg", "88374a71349e01a71224b4f3ba4c1551": "/images/dining-b.jpg", "50c08cb17e996beb995f93e4b5c9ec7a": "/images/dining-main.jpg", "68afb0141cca03787514929be2da1f6a": "/images/hero.jpg", "1f7f54341f7f3e51adcbd34ef32ff1a3": "/images/kitchen-arch.jpg", "7b99661beb1a942c7f0da5ee40b7072b": "/images/kitchen-u.jpg", "ac71d11f5109390416132ba6d57fb70d": "/images/kitchen-wide.jpg", "d3a756b819ae16d39ded8df6d76c502c": "/images/kitchen2-b.jpg", "cd02771e0c9ff2e9fe92e73ab96feca9": "/images/kitchen2-main.jpg", "ffb2c71f27c986bedfadbe2c9e580d80": "/images/mood-facades.jpg", "b8b7df8f41168cc73d0fe2a3abf2c5bb": "/images/mood-interiors.jpg", "2fb17fd381cbac532d5d01a06834ef74": "/images/mood-kitchens.jpg", "e1e7f8f39f77544dea5263309fac65bd": "/images/p1-wardrobe.jpg", "695f1b520153166b22ae46124e6953b0": "/images/p1-wardrobes2-left.jpg", "261398f5c3bd7a0ae85acbf357e25ff1": "/images/p1-wardrobes2-right.jpg", "252f9f4f4b8ffb580bd73c654005e636": "/images/p2-flat-plan.jpg", "9dabb767fc78dc6fc12af300f70ff4bd": "/images/p2-kids-plan.jpg", "bd7461c6e11eccf9b950b5f7ce027d5d": "/images/p2-wardrobe-a.jpg", "6153218fd6241a9d645ae49492dc3d53": "/images/p2-wardrobe-b.jpg", "d58483754379ac4476442d801a383b6b": "/images/p2-wardrobe-c.jpg", "70965ea62642b1d0d6ae432688cabb5e": "/images/portrait.jpg", "a1a353fff88e7ecaab0392f043fdd90f": "/images/viz-living-a.jpg", "5bf717fd1f1af9a51f570dcb3bbdf641": "/images/viz-living-b.jpg", "704e4563dfc582bdd5a7d41c43370769": "/images/washroom-a.jpg", "944e07746cd13625fa2268af912b0557": "/images/washroom-b.jpg", "1433be153d814ed79ca2a1d7e8a87124": "/images/washroom-c.jpg", "784395ce2a864e83c665865831a20837": "/images/portrait-new.jpg", "dce12f70045f2e3449291f978be2e2c5": "/resume.pdf"};
+  const U = id => id ? (IMGMAP[id] || (/^(https?:)?\/\//.test(id) ? id : '/_blob/' + id)) : '';
+  const lines = t => String(t || '').split('\n').map(x => x.trim()).filter(Boolean);
+  function move(arr, i, d) { const j = i + d; if (j < 0 || j >= arr.length) return; const t = arr[i]; arr[i] = arr[j]; arr[j] = t; }
+  function pic(im, cls) {
+    const f = h('figure', { class: 'ph ' + (cls || ''), style: im && im.w && im.h ? 'aspect-ratio:' + im.w + '/' + im.h : null });
+    if (im && im.id) {
+      const i = h('img', { src: U(im.id), alt: im.alt || '', loading: 'lazy', decoding: 'async' });
+      i.addEventListener('load', () => f.classList.add('on'));
+      i.addEventListener('error', () => f.classList.add('err'));
+      f.append(i); if (i.complete && i.naturalWidth) f.classList.add('on');
+    }
+    return f;
+  }
+  const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+  const ratio = (im, lo, hi) => clamp(im && im.w && im.h ? im.w / im.h : 1.4, lo, hi);
+  function fit(im, r) { const f = pic(im); f.style.cssText = 'aspect-ratio:' + r.toFixed(3); return f; }
+  let toastT;
+  function toast(msg) { const t = $('#toast'); t.textContent = msg; t.classList.add('show'); clearTimeout(toastT); toastT = setTimeout(() => t.classList.remove('show'), 3600); }
+  function copy(text, btn) {
+    const fb = () => { const el = btn && btn.closest('.cline') && $('.val', btn.closest('.cline')); if (el) { const r = document.createRange(); r.selectNodeContents(el); const s = getSelection(); s.removeAllRanges(); s.addRange(r); } toast('Selected. Press copy on your keyboard.'); };
+    try { navigator.clipboard.writeText(text).then(() => toast('Copied'), fb); } catch (e) { fb(); }
+  }
+
+  /* ---------- data + theme ---------- */
+  const PRESETS = [
+    { id: 'sunny', name: 'Studio Teal', t: { bg: '#0A0F1A', ink: '#EAF1F7', c1: '#111A2A', c2: '#111A2A', c3: '#111A2A', c4: '#111A2A', acc: '#1FE0C3' } },
+    { id: 'gold', name: 'Midnight Gold', t: { bg: '#0E0E10', ink: '#F3EFE8', c1: '#19191D', c2: '#19191D', c3: '#19191D', c4: '#19191D', acc: '#D9B26F' } },
+    { id: 'ivory', name: 'Ivory Clay', t: { bg: '#FAF7F2', ink: '#1B1B1F', c1: '#FFFFFF', c2: '#FFFFFF', c3: '#FFFFFF', c4: '#FFFFFF', acc: '#C8553D' } },
+    { id: 'sage', name: 'Calm Sage', t: { bg: '#F4F7F3', ink: '#17251E', c1: '#FFFFFF', c2: '#FFFFFF', c3: '#FFFFFF', c4: '#FFFFFF', acc: '#2F7A63' } },
+    { id: 'ocean', name: 'Deep Blue', t: { bg: '#0B1424', ink: '#E8F0FA', c1: '#12203A', c2: '#12203A', c3: '#12203A', c4: '#12203A', acc: '#5AA9F6' } }
+  ];
+  function ensure() {
+    const P = S.profile;
+    S.theme = S.theme || {}; if (!S.theme.preset) S.theme.preset = 'sunny'; if (S.theme.custom === undefined) S.theme.custom = null;
+    P.social = P.social || { whatsapp: '', instagram: '' };
+    S.projects.forEach(p => { p.images = p.images || []; });
+  }
+  function lum(hex) { const m = /^#?([0-9a-f]{6})$/i.exec(hex || ''); if (!m) return 0.5; const n = parseInt(m[1], 16); return 0.2126 * (n >> 16 & 255) / 255 + 0.7152 * (n >> 8 & 255) / 255 + 0.0722 * (n & 255) / 255; }
+  function resolveTheme() { const T = S.theme; if (T.preset === 'custom' && T.custom) return T.custom; return (PRESETS.find(x => x.id === T.preset) || PRESETS[0]).t; }
+  function applyTheme() {
+    const t = resolveTheme(), s = document.documentElement.style, dark = lum(t.bg) < 0.45;
+    ['bg', 'ink', 'c1', 'c2', 'c3', 'c4'].forEach(k => s.setProperty('--' + k, t[k]));
+    const acc = t.acc || t.c2;
+    s.setProperty('--accent', acc); s.setProperty('--on-acc', lum(acc) > 0.45 ? '#0b0f1a' : '#ffffff');
+    s.setProperty('--on-c', t.ink);
+    s.setProperty('--sand', t.ink); s.setProperty('--on-sand', t.bg);
+    s.setProperty('--shadow', dark ? 'rgba(0,0,0,.5)' : 'rgba(30,27,46,.28)');
+    s.setProperty('--danger', dark ? '#ff8f7a' : '#d6402a');
+    s.colorScheme = dark ? 'dark' : 'light';
+  }
+  const waLink = () => { const n = (S.profile.social.whatsapp || '').replace(/\D/g, ''); return n.length > 7 ? 'https://wa.me/' + n + '?text=' + encodeURIComponent('Hi ' + S.profile.name.split(' ')[0] + ', I saw your portfolio and would like to talk about a project.') : ''; };
+  const igLink = () => { const v = (S.profile.social.instagram || '').trim().replace(/^https?:\/\/(www\.)?instagram\.com\//i, '').replace(/^@/, '').replace(/[\/?].*$/, ''); return v ? 'https://instagram.com/' + v : ''; };
+  const colorOf = (p, i) => p.color >= 1 && p.color <= 4 ? p.color : (i % 4) + 1;
+  const isFeatured = p => p.feature !== undefined ? !!p.feature : !/drawing|mood/i.test(p.category || '');
+  const coverOf = p => (p.images || []).find(i => i.id === p.cover) || (p.images || [])[0] || null;
+  const cats = () => { const a = []; S.projects.forEach(p => { if (p.category && !a.includes(p.category)) a.push(p.category); }); return a; };
+
+  let dirty = false, isAdmin = false, art = null, assetsNS = null, filter = 'All', renderT;
+  const adm = { tab: 'projects', editing: null, usage: null };
+  function touch() { dirty = true; updPub(); clearTimeout(renderT); renderT = setTimeout(renderSite, 350); }
+
+  /* ---------- site ---------- */
+  function renderSite() {
+    const root = $('#root'), sy = window.scrollY;
+    applyTheme();
+    root.replaceChildren(h('div', { class: 'live', 'aria-hidden': 'true' }, h('i'), h('i'), h('i')), topEl(), h('main', null, heroEl(), workEl(), aboutEl(), contactEl()), footEl(), waFab(), dockEl(), h('div', { class: 'prog', id: 'prog' }));
+    window.scrollTo(0, sy);
+    document.title = S.profile.name + ' Interiors';
+    initReveal(); initTilt(); onScroll();
+  }
+  function go(sel) { const t = $(sel); if (t) t.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'start' }); }
+  const link = (label, sel) => h('a', { href: sel, onclick: e => { e.preventDefault(); go(sel); } }, label);
+
+  function topEl() {
+    const P = S.profile, wa = waLink();
+    return h('header', { class: 'top', id: 'topbar' }, h('div', { class: 'wrap top-in' },
+      h('a', { class: 'brand', href: '#home', onclick: e => { e.preventDefault(); scrollTo({ top: 0, behavior: reduced ? 'auto' : 'smooth' }); } }, P.name),
+      h('nav', { class: 'links', 'aria-label': 'Sections' }, link('Work', '#work'), link('About', '#about'), link('Contact', '#contact')),
+      h('div', { class: 'top-act' },
+        isAdmin ? h('button', { class: 'btn small', onclick: () => openAdmin(), 'aria-label': 'Open dashboard' }, ic('edit'), 'Dashboard') : null,
+        wa ? h('a', { class: 'btn small wa', href: wa, rel: 'noopener' }, ic('whatsapp'), 'Chat') : h('a', { class: 'btn small', href: '#contact', onclick: e => { e.preventDefault(); go('#contact'); } }, 'Let’s talk'))));
+  }
+
+  const resumeBtn = () => { const r = S.profile.resume; return r && r.id ? h('a', { class: 'btn ghost', href: U(r.id), download: (r.name || 'Resume') + '.pdf', target: '_blank', rel: 'noopener' }, ic('download'), 'Resume') : null; };
+  function stripEl(list, cls, dur) {
+    const tiles = list.map(({ im, p }, i) => {
+      const arch = false, pill = false;
+      const r = arch ? 0.8 : pill ? 1.35 : ratio(im, 1.0, 1.5);
+      const b = h('button', { class: 'tile' + (arch ? ' arch' : pill ? ' pill' : ''), style: 'aspect-ratio:' + r.toFixed(3), 'aria-label': 'Open ' + p.title, onclick: () => openProject(p.id) },
+        h('img', { src: U(im.id), alt: im.alt || p.title, loading: 'lazy', decoding: 'async' }));
+      return b;
+    });
+    const dupe = tiles.map(t => { const c = t.cloneNode(true); c.setAttribute('aria-hidden', 'true'); c.tabIndex = -1; c.addEventListener('click', () => { const p = list[tiles.indexOf(t)].p; openProject(p.id); }); return c; });
+    return h('div', { class: 'strip ' + cls, style: '--dur:' + dur + 's' }, tiles, dupe);
+  }
+  function heroEl() {
+    const P = S.profile, nm = P.name.split(/\s+/), first = nm[0], rest = nm.slice(1).join(' ');
+    const pool = [];
+    S.projects.filter(isFeatured).forEach(p => p.images.forEach(im => pool.push({ im, p })));
+    const A = pool.filter((_, i) => i % 2 === 0), B = pool.filter((_, i) => i % 2 === 1);
+    const dur = n => Math.max(40, n * 8);
+    return h('section', { class: 'hero', id: 'home' }, h('div', { class: 'wrap' },
+      h('div', { class: 'hero-top' },
+        h('span', { class: 'shape sun', 'aria-hidden': 'true' }), h('span', { class: 'shape arch', 'aria-hidden': 'true' }), h('span', { class: 'shape dot', 'aria-hidden': 'true' }), h('span', { class: 'shape half', 'aria-hidden': 'true' }),
+        h('h1', { class: 'name', 'aria-label': P.name }, h('span', { class: 'ln', 'aria-hidden': 'true' }, h('span', null, first)), h('span', { class: 'ln', 'aria-hidden': 'true' }, h('span', { class: 'hl' }, rest))),
+        h('div', { class: 'copy' },
+          h('p', { class: 'hero-tag' }, P.tagline),
+          h('div', { class: 'cta' },
+            h('a', { class: 'btn', href: '#work', onclick: e => { e.preventDefault(); go('#work'); } }, 'See my projects', ic('arrow')),
+            h('a', { class: 'btn ghost', href: '#contact', onclick: e => { e.preventDefault(); go('#contact'); } }, 'Say hello'),
+            resumeBtn()))),
+      pool.length ? h('div', { class: 'strips' }, stripEl(A.length ? A : pool, 'a', dur(A.length)), B.length ? stripEl(B, 'b', dur(B.length)) : null) : null));
+  }
+
+  function workEl() {
+    const chips = ['All'].concat(cats());
+    if (!chips.includes(filter)) filter = 'All';
+    return h('section', { class: 'sec', id: 'work', style: 'padding-top:0' }, h('div', { class: 'wrap' },
+      h('div', { class: 'work-head' },
+        h('p', { class: 'kicker', 'data-rv': '' }, 'Selected work'),
+        h('h2', { class: 'display h2', 'data-rv': '', style: '--d:.05s' }, 'Spaces I’ve designed'),
+        isAdmin ? h('div', null, h('button', { class: 'btn small', onclick: () => newProject() }, ic('plus'), 'Add project')) : null),
+      h('div', { class: 'filters', role: 'group', 'aria-label': 'Filter projects' }, chips.map(c =>
+        h('button', { class: 'chip', 'aria-pressed': c === filter ? 'true' : 'false', onclick: () => { filter = c; $$('.chip').forEach(x => x.setAttribute('aria-pressed', x.textContent === c ? 'true' : 'false')); fillBlocks(); } }, c))),
+      h('div', { class: 'blocks', id: 'blocks' }, blocks())));
+  }
+  function blocks() {
+    const list = S.projects.map((p, i) => ({ p, i })).filter(x => filter === 'All' || x.p.category === filter);
+    if (!list.length) return h('p', { class: 'empty' }, 'Nothing here yet.');
+    return list.map(({ p, i }, k) => {
+      const cv = coverOf(p), open = () => openProject(p.id);
+      const rest = p.images.filter(x => !cv || x.id !== cv.id), th = rest.slice(0, 3), more = rest.length - th.length;
+      const main = h('div', { class: 'blk-main', 'data-tilt': '', role: 'button', tabindex: '0', 'aria-label': 'Open ' + p.title, onclick: open, onkeydown: e => { if (e.key === 'Enter') open(); } }, cv ? fit(cv, ratio(cv, 1.25, 1.65)) : pic(null));
+      const strip = th.length ? h('div', { class: 'blk-strip' }, th.map((im, j) => {
+        const c = h('div', { class: 'blk-th', 'data-tilt': '', onclick: open }, fit(im, j === 0 ? 0.85 : 1.1));
+        return c;
+      })) : null;
+      const meta = [p.space, p.client].filter(Boolean).join(' · ');
+      return h('article', { class: 'blk', 'data-c': String(colorOf(p, i)), 'data-rv': '' },
+        h('div', { class: 'blk-media' }, main, strip),
+        h('div', { class: 'blk-info' },
+          h('span', { class: 'tag' }, p.category || 'Project'),
+          h('h3', null, p.title),
+          meta ? h('p', null, meta) : null,
+          h('div', { class: 'cta', style: 'opacity:1;animation:none;gap:.5rem' },
+            h('button', { class: 'btn go', onclick: open }, 'View project', ic('arrow')),
+            isAdmin ? h('button', { class: 'btn ghost small', onclick: () => openAdmin('projects', p.id) }, ic('edit'), 'Edit') : null)));
+    });
+  }
+  function fillBlocks() {
+    const g = $('#blocks'); if (!g) return;
+    g.style.opacity = '0';
+    setTimeout(() => { g.replaceChildren(...[].concat(blocks())); g.style.opacity = '1'; initReveal(); initTilt(); }, 220);
+  }
+
+  function aboutEl() {
+    const P = S.profile;
+    return h('section', { class: 'sec', id: 'about', style: 'padding-top:0' }, h('div', { class: 'wrap' },
+      h('div', { class: 'about' },
+        h('div', { class: 'portrait', 'data-rv': '' }, pic(P.portrait)),
+        h('div', { class: 'hello' },
+          h('p', { class: 'kicker', 'data-rv': '' }, 'About'),
+          h('h2', { class: 'display h2', 'data-rv': '', style: '--d:.05s' }, 'Hi, I’m ' + P.name.split(' ')[0] + '.'),
+          h('p', { class: 'lede', 'data-rv': '', style: '--d:.1s' }, P.bio),
+          h('div', { class: 'cols', 'data-rv': '', style: '--d:.15s' },
+            h('div', null, h('h3', null, 'Studies'), h('div', { class: 'edu' }, (P.education || []).map(e => h('div', null, h('b', null, e.title), h('span', null, e.place), h('em', null, e.years))))),
+            h('div', null, h('h3', null, 'I love'), h('div', { class: 'pills' }, (P.interests || []).map(x => h('span', { class: 'pill line' }, x))))))),
+      h('div', { class: 'sk', 'data-rv': '' },
+        h('div', null, h('h3', null, 'Tools I use'), h('div', { class: 'pills' }, (P.software || []).map(x => h('span', { class: 'pill' }, x)))),
+        h('div', null, h('h3', null, 'What I do'), h('div', { class: 'pills' }, (P.designSkills || []).map(x => h('span', { class: 'pill line' }, x)))))));
+  }
+
+  function contactEl() {
+    const P = S.profile, wa = waLink(), ig = igLink();
+    const line = (label, val) => h('div', { class: 'cline' }, h('span', { class: 'lab' }, label), h('span', { class: 'val' }, val), h('button', { class: 'btn ghost small', 'aria-label': 'Copy ' + label, onclick: e => copy(val, e.currentTarget) }, ic('copy'), 'Copy'));
+    return h('section', { class: 'sec', id: 'contact', style: 'padding-top:0' }, h('div', { class: 'wrap' },
+      h('div', { class: 'contact', 'data-rv': '' },
+        h('span', { class: 'shape sun', 'aria-hidden': 'true' }), h('span', { class: 'shape arch', 'aria-hidden': 'true' }),
+        h('p', { class: 'kicker' }, 'Contact'),
+        h('h2', { class: 'display h1' }, 'Let’s design your space.'),
+        h('p', { class: 'lede' }, 'Tell me about your home and what you want it to feel like. I reply with ideas and next steps.'),
+        h('div', { class: 'soc' },
+          wa ? h('a', { class: 'btn wa', href: wa, rel: 'noopener' }, ic('whatsapp'), 'WhatsApp') : null,
+          ig ? h('a', { class: 'btn', href: ig, rel: 'noopener' }, ic('instagram'), 'Instagram') : null,
+          h('a', { class: 'btn ghost', href: 'mailto:' + P.email }, ic('mail'), 'Email'), resumeBtn()),
+        (!wa && !ig && isAdmin) ? h('p', { class: 'note' }, 'Add your WhatsApp number and Instagram name in Dashboard → Look & links.') : null,
+        h('div', { class: 'cgrid' }, line('Email', P.email), line('Phone', P.phone)))));
+  }
+  function footEl() {
+    const wa = waLink(), ig = igLink();
+    return h('footer', { class: 'wrap foot' }, h('span', null, '© ' + (S.profile.year || '2026') + ' ' + S.profile.name),
+      h('div', { class: 'soc' },
+        wa ? h('a', { href: wa, rel: 'noopener', class: 'link-btn' }, ic('whatsapp'), 'WhatsApp') : null,
+        ig ? h('a', { href: ig, rel: 'noopener', class: 'link-btn' }, ic('instagram'), 'Instagram') : null,
+        isAdmin ? h('button', { class: 'link-btn', onclick: () => openAdmin() }, ic('lock'), 'Dashboard') : null));
+  }
+  const waFab = () => { const wa = waLink(); return wa ? h('a', { class: 'wa-fab', href: wa, rel: 'noopener', 'aria-label': 'Chat on WhatsApp' }, ic('whatsapp')) : h('span', { hidden: true }); };
+  function dockEl() {
+    const wa = waLink(), items = [['Home', '#home', 'home'], ['Work', '#work', 'grid'], ['About', '#about', 'user'], ['Contact', '#contact', 'mail']];
+    return h('nav', { class: 'dock', 'aria-label': 'Quick navigation' }, items.map(it =>
+      h('a', { href: it[1], 'data-sec': it[1].slice(1), 'aria-current': 'false', onclick: e => { e.preventDefault(); if (it[1] === '#home') scrollTo({ top: 0, behavior: reduced ? 'auto' : 'smooth' }); else go(it[1]); } }, ic(it[2]), h('span', null, it[0]))),
+      wa ? h('a', { class: 'wa', href: wa, rel: 'noopener', 'aria-label': 'Chat on WhatsApp' }, ic('whatsapp'), h('span', null, 'Chat')) : null);
+  }
+
+  /* ---------- motion ---------- */
+  let io, ticking = false, lastY = 0;
+  function initReveal() {
+    if (io) io.disconnect();
+    if (!('IntersectionObserver' in window) || reduced) return;
+    io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -6% 0px' });
+    $$('[data-rv]').forEach(n => { if (n.getBoundingClientRect().top > innerHeight * 0.95) { n.classList.add('pre'); io.observe(n); } });
+  }
+  function initTilt() {
+    if (reduced || !fine) return;
+    $$('[data-tilt]').forEach(el => {
+      if (el._t) return; el._t = 1;
+      el.addEventListener('pointermove', e => {
+        const r = el.getBoundingClientRect(), x = (e.clientX - r.left) / r.width, y = (e.clientY - r.top) / r.height;
+        el.classList.add('tilting');
+        el.style.transform = 'perspective(900px) rotateX(' + ((0.5 - y) * 6).toFixed(2) + 'deg) rotateY(' + ((x - 0.5) * 8).toFixed(2) + 'deg) scale(1.012)';
+      });
+      el.addEventListener('pointerleave', () => { el.classList.remove('tilting'); el.style.transform = ''; });
+    });
+  }
+  function onScroll() {
+    const y = scrollY, max = Math.max(1, document.documentElement.scrollHeight - innerHeight);
+    const p = $('#prog'); if (p) p.style.transform = 'scaleX(' + Math.min(1, y / max) + ')';
+    const t = $('#topbar'); if (t) { t.classList.toggle('hide', y > 240 && y > lastY + 4); if (y < lastY - 4) t.classList.remove('hide'); }
+    lastY = y;
+    let act = 'home';
+    ['work', 'about', 'contact'].forEach(id => { const el = document.getElementById(id); if (el && el.getBoundingClientRect().top <= innerHeight * 0.45) act = id; });
+    $$('.dock a[data-sec]').forEach(a => a.setAttribute('aria-current', a.getAttribute('data-sec') === act ? 'true' : 'false'));
+    ticking = false;
+  }
+  addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
+
+  /* ---------- project page + lightbox ---------- */
+  function openProject(id) {
+    const i = S.projects.findIndex(p => p.id === id); if (i < 0) return;
+    const p = S.projects[i], n = S.projects[(i + 1) % S.projects.length], pv = S.projects[(i - 1 + S.projects.length) % S.projects.length];
+    const L = $('#sheet'), imgs = p.images || [];
+    const meta = [['Type', p.type], ['Space', p.space], ['Client', p.client], ['Scope', p.scope], ['Year', p.year]].filter(m => m[1]);
+    L.replaceChildren(
+      h('div', { class: 'sheet-bar' }, h('div', { class: 'wrap' },
+        h('button', { class: 'btn small ghost', id: 'sheet-close', onclick: closeProject }, ic('left'), 'Back'),
+        h('div', { class: 'grp' },
+          isAdmin ? h('button', { class: 'btn small ghost', onclick: () => { closeProject(); openAdmin('projects', p.id); } }, ic('edit'), 'Edit') : null,
+          h('button', { class: 'ib', 'aria-label': 'Previous project', onclick: () => { openProject(pv.id); L.scrollTo(0, 0); } }, ic('left')),
+          h('button', { class: 'ib', 'aria-label': 'Next project', onclick: () => { openProject(n.id); L.scrollTo(0, 0); } }, ic('right'))))),
+      h('div', { class: 'wrap' },
+        h('div', { class: 'sheet-hero', 'data-c': String(colorOf(p, i)) },
+          h('p', { class: 'kicker' }, [p.series, p.category].filter(Boolean).join(' · ')),
+          h('h2', { class: 'display' }, p.title),
+          p.desc ? h('p', { class: 'desc' }, p.desc) : null,
+          storyEl(p),
+          meta.length ? h('dl', { class: 'meta' }, meta.map(m => h('div', null, h('dt', null, m[0]), h('dd', null, String(m[1]))))) : null),
+        compareEl(p),
+        h('div', { class: 'gal' }, imgs.map((im, k) => {
+          const f = pic(im, im.w / im.h > 1.7 ? 'wide' : ''); f.setAttribute('role', 'button'); f.tabIndex = 0; f.setAttribute('aria-label', 'Enlarge image ' + (k + 1));
+          f.addEventListener('click', () => openLB(imgs, k, p.title)); f.addEventListener('keydown', e => { if (e.key === 'Enter') openLB(imgs, k, p.title); });
+          return f;
+        })),
+        S.projects.length > 1 ? h('div', { class: 'next', style: '--nc:var(--c' + colorOf(n, i + 1) + ')' }, h('button', { onclick: () => { openProject(n.id); L.scrollTo(0, 0); } }, h('span', { class: 'kicker', style: 'color:inherit;opacity:.7' }, 'Next project'), h('span', { class: 'display' }, n.title))) : null));
+    L.classList.add('open'); document.body.classList.add('lock');
+    setTimeout(() => { const b = $('#sheet-close'); if (b) b.focus({ preventScroll: true }); }, 60);
+  }
+  function storyEl(p) {
+    const st = p.story || {}, items = [['The brief', st.problem], ['The idea', st.idea], ['The result', st.result]].filter(x => x[1] && x[1].trim());
+    const tools = lines((p.tools || '').replace(/,/g, '\n'));
+    if (!items.length && !tools.length) return null;
+    return h('div', { class: 'story' },
+      items.length ? h('div', { class: 'story-grid' }, items.map(x => h('div', null, h('h4', null, x[0]), h('p', null, x[1])))) : null,
+      tools.length ? h('div', { class: 'tools' }, h('span', null, 'Made with'), tools.map(t => h('em', null, t))) : null);
+  }
+  function compareEl(p) {
+    const c = p.compare; if (!c || !c.a || !c.b) return null;
+    const A = p.images.find(i => i.id === c.a), B = p.images.find(i => i.id === c.b); if (!A || !B) return null;
+    const r = clamp(A.w / A.h, 1, 1.9), box = h('div', { class: 'cmp', style: 'aspect-ratio:' + r.toFixed(3) + ';--pos:50%' });
+    const range = h('input', { type: 'range', min: '0', max: '100', value: '50', 'aria-label': 'Drag to compare ' + (c.la || 'before') + ' and ' + (c.lb || 'after') });
+    range.addEventListener('input', () => box.style.setProperty('--pos', range.value + '%'));
+    box.append(h('img', { src: U(B.id), alt: B.alt || '', draggable: 'false' }), h('img', { class: 'top', src: U(A.id), alt: A.alt || '', draggable: 'false' }),
+      h('span', { class: 'lab l' }, c.la || 'Plan'), h('span', { class: 'lab r' }, c.lb || '3D view'), h('i', { class: 'bar' }, h('b', null, ic('left'), ic('right'))), range);
+    return h('div', { class: 'cmp-wrap' }, box);
+  }
+  function closeProject() { $('#sheet').classList.remove('open'); if (!$('.adm.open')) document.body.classList.remove('lock'); }
+  const lb = { list: [], i: 0, title: '' };
+  function openLB(list, i, title) { lb.list = list; lb.i = i; lb.title = title || ''; $('#lb').classList.add('open'); showLB(); }
+  function showLB() {
+    const im = lb.list[lb.i]; if (!im) return;
+    $('#lb-stage').replaceChildren(h('img', { src: U(im.id), alt: im.alt || lb.title, draggable: 'false' }));
+    $('#lb-count').textContent = (lb.i + 1) + ' / ' + lb.list.length + ' · ' + lb.title;
+  }
+  const stepLB = d => { lb.i = (lb.i + d + lb.list.length) % lb.list.length; showLB(); };
+  const closeLB = () => $('#lb').classList.remove('open');
+  function buildLayers() {
+    const lbEl = h('div', { class: 'lb', id: 'lb', role: 'dialog', 'aria-label': 'Image viewer', 'aria-modal': 'true' },
+      h('div', { class: 'lb-top' }, h('span', { id: 'lb-count' }), h('button', { class: 'ib', 'aria-label': 'Close viewer', onclick: closeLB }, ic('close'))),
+      h('div', { class: 'lb-stage', id: 'lb-stage' }),
+      h('div', { class: 'lb-bot' }, h('button', { class: 'ib', 'aria-label': 'Previous image', onclick: () => stepLB(-1) }, ic('left')), h('button', { class: 'ib', 'aria-label': 'Next image', onclick: () => stepLB(1) }, ic('right'))));
+    let sx = null;
+    lbEl.addEventListener('pointerdown', e => { sx = e.clientX; });
+    lbEl.addEventListener('pointerup', e => { if (sx == null) return; const dx = e.clientX - sx; sx = null; if (Math.abs(dx) > 50) stepLB(dx < 0 ? 1 : -1); });
+    const gate = h('div', { class: 'modal', id: 'gate', role: 'dialog', 'aria-modal': 'true', 'aria-label': 'Admin access' }, h('div', { class: 'modal-card' },
+      h('h3', null, 'Studio access'),
+      h('p', null, 'The dashboard appears as a Dashboard button in the top bar when you open this page signed in to the Claude account that has edit access.'),
+      h('p', null, 'If you cannot see it, ask the site owner to share the page with you as an Editor, then reload.'),
+      h('div', null, h('button', { class: 'btn small', onclick: () => $('#gate').classList.remove('open') }, 'Close'))));
+    document.body.append(h('div', { class: 'layer', id: 'sheet', role: 'dialog', 'aria-label': 'Project', 'aria-modal': 'true' }), lbEl, gate, h('div', { class: 'toast', id: 'toast', role: 'status', 'aria-live': 'polite' }));
+  }
+  document.addEventListener('keydown', e => {
+    const lbo = $('#lb.open');
+    if (e.key === 'Escape') { if (lbo) closeLB(); else if ($('#gate.open')) $('#gate').classList.remove('open'); else if ($('.adm.open')) { if (adm.editing) { adm.editing = null; renderAdmin(); } else closeAdmin(); } else if ($('#sheet.open')) closeProject(); }
+    else if (lbo && e.key === 'ArrowRight') stepLB(1); else if (lbo && e.key === 'ArrowLeft') stepLB(-1);
+  });
+
+  /* ---------- admin ---------- */
+  const getProject = id => S.projects.find(p => p.id === id);
+  function newProject() {
+    const p = { id: uid(), title: 'New project', series: '', category: cats()[0] || 'Residential', type: 'Residential interior', year: String(new Date().getFullYear()), space: '', client: '', scope: '', desc: '', cover: '', color: 0, feature: true, images: [] };
+    S.projects.unshift(p); touch(); openAdmin('projects', p.id);
+  }
+  function openAdmin(tab, editing) { if (!isAdmin) return; adm.tab = tab || adm.tab; adm.editing = editing || null; $('#adm').classList.add('open'); document.body.classList.add('lock'); renderAdmin(); loadUsage(); }
+  function closeAdmin() { $('#adm').classList.remove('open'); if (!$('#sheet.open')) document.body.classList.remove('lock'); renderSite(); }
+  function loadUsage() { if (assetsNS) assetsNS.list().then(r => { adm.usage = r.usage; if ($('.adm.open') && adm.tab === 'projects' && !adm.editing) renderAdmin(); }, () => {}); }
+  function updPub() { const b = $('#pubbar'); if (b) b.classList.toggle('show', dirty && isAdmin); const d = $('#adm-dot'); if (d) d.classList.toggle('on', dirty); }
+  function mountAdmin() {
+    document.body.append(h('div', { class: 'adm', id: 'adm', role: 'dialog', 'aria-label': 'Studio dashboard', 'aria-modal': 'true' }),
+      h('div', { class: 'pubbar', id: 'pubbar' }, h('span', null, 'Unpublished changes'), h('button', { class: 'btn small ghost', onclick: () => location.reload() }, 'Discard'), h('button', { class: 'btn small', id: 'pubbtn', onclick: publish }, 'Publish')));
+  }
+  function renderAdmin() {
+    const A = $('#adm'), main = h('div', { class: 'adm-main' }), tabs = [['projects', 'Projects'], ['profile', 'Profile'], ['look', 'Look & links'], ['help', 'Help']];
+    const inner = h('div', { class: 'wrap adm-in' });
+    if (adm.tab === 'projects') inner.append(adm.editing && getProject(adm.editing) ? projectEditor(getProject(adm.editing)) : projectList());
+    else if (adm.tab === 'profile') inner.append(profileEditor()); else if (adm.tab === 'look') inner.append(lookEditor()); else inner.append(helpView());
+    main.append(inner);
+    const keep = $('.adm-main', A) ? $('.adm-main', A).scrollTop : 0;
+    A.replaceChildren(
+      h('div', { class: 'wrap adm-bar' }, h('h2', null, 'Studio dashboard'), h('div', { class: 'grp' }, h('span', { class: 'dot' + (dirty ? ' on' : ''), id: 'adm-dot', title: 'Unpublished changes' }), h('button', { class: 'btn small', onclick: publish, disabled: !dirty }, 'Publish'), h('button', { class: 'ib', 'aria-label': 'Close dashboard', onclick: closeAdmin }, ic('close')))),
+      h('div', { class: 'wrap' }, h('div', { class: 'tabs', role: 'tablist' }, tabs.map(t => h('button', { class: 'tab', role: 'tab', 'aria-selected': adm.tab === t[0] ? 'true' : 'false', onclick: () => { adm.tab = t[0]; adm.editing = null; renderAdmin(); } }, t[1])))),
+      main);
+    if (adm.editing) main.scrollTop = keep;
+  }
+  function fld(label, val, on, o) {
+    o = o || {};
+    const inp = o.area ? h('textarea', { id: o.id, rows: o.rows || 4, placeholder: o.ph || '' }) : h('input', { id: o.id, type: 'text', placeholder: o.ph || '', list: o.list || null });
+    inp.value = val || ''; inp.addEventListener('input', () => { on(inp.value); touch(); });
+    return h('label', { class: 'fld' }, h('span', null, label), inp, o.hint ? h('small', null, o.hint) : null);
+  }
+  function sw(label, hint, on, set, id) {
+    const i = h('input', { type: 'checkbox', checked: !!on, id }); i.addEventListener('change', () => { set(i.checked); touch(); });
+    return h('label', { class: 'switch', for: id }, h('span', null, label, h('small', null, hint)), i);
+  }
+
+  function projectList() {
+    const u = adm.usage;
+    return h('div', { class: 'form' },
+      h('div', { class: 'stats' },
+        h('div', { class: 'stat' }, h('b', null, String(S.projects.length)), h('span', null, 'Projects')),
+        h('div', { class: 'stat' }, h('b', null, String(S.projects.reduce((n, p) => n + p.images.length, 0))), h('span', null, 'Images')),
+        h('div', { class: 'stat' }, h('b', null, u ? (u.bytes / 1048576).toFixed(1) + ' MB' : '–'), h('span', null, 'Storage'), u && u.maxBytes ? h('div', { class: 'meter' }, h('i', { style: 'width:' + Math.min(100, u.bytes / u.maxBytes * 100) + '%' })) : null)),
+      h('div', { style: 'display:flex;gap:.6rem;flex-wrap:wrap' }, h('button', { class: 'btn', onclick: () => newProject() }, ic('plus'), 'New project'), h('button', { class: 'btn ghost', onclick: () => { closeAdmin(); go('#work'); } }, ic('eye'), 'View site')),
+      h('div', { class: 'plist' }, S.projects.map((p, i) => {
+        const cv = coverOf(p), del = h('button', { class: 'btn small ghost' }, ic('trash'), 'Delete'); let armed = false;
+        del.addEventListener('click', () => {
+          if (!armed) { armed = true; del.className = 'btn small danger'; del.replaceChildren(ic('trash'), 'Tap again to delete'); setTimeout(() => { armed = false; del.className = 'btn small ghost'; del.replaceChildren(ic('trash'), 'Delete'); }, 4000); return; }
+          S.projects.splice(i, 1); touch(); renderAdmin(); toast('Project removed. Publish to make it live.');
+        });
+        return h('div', { class: 'prow' }, h('div', { class: 'th' }, cv ? h('img', { src: U(cv.id), alt: '', loading: 'lazy' }) : null),
+          h('div', { class: 'tt' }, h('b', null, p.title), h('span', null, [p.category, p.images.length + ' images'].filter(Boolean).join(' · '))),
+          h('div', { class: 'acts' }, h('button', { class: 'btn small', onclick: () => { adm.editing = p.id; renderAdmin(); $('.adm-main').scrollTop = 0; } }, ic('edit'), 'Edit'),
+            h('button', { class: 'tbtn', 'aria-label': 'Move up', disabled: i === 0, onclick: () => { move(S.projects, i, -1); touch(); renderAdmin(); } }, ic('up')),
+            h('button', { class: 'tbtn', 'aria-label': 'Move down', disabled: i === S.projects.length - 1, onclick: () => { move(S.projects, i, 1); touch(); renderAdmin(); } }, ic('down')), del));
+      })));
+  }
+
+  function projectEditor(p) {
+    const grid = h('div', { class: 'thumbs' }), upl = h('div', { class: 'upl' });
+    function fillThumbs() {
+      grid.replaceChildren(...p.images.map((im, i) => {
+        const cov = (p.cover || (p.images[0] && p.images[0].id)) === im.id;
+        return h('div', { class: 'thumb' + (cov ? ' cover' : '') }, pic(im), cov ? h('span', { class: 'cv' }, 'Cover') : null,
+          h('div', { class: 'tb' },
+            h('button', { class: 'tbtn', 'aria-label': 'Make cover image', onclick: () => { p.cover = im.id; touch(); fillThumbs(); } }, ic('star')),
+            h('button', { class: 'tbtn', 'aria-label': 'Move earlier', disabled: i === 0, onclick: () => { move(p.images, i, -1); touch(); fillThumbs(); } }, ic('left')),
+            h('button', { class: 'tbtn', 'aria-label': 'Move later', disabled: i === p.images.length - 1, onclick: () => { move(p.images, i, 1); touch(); fillThumbs(); } }, ic('right')),
+            h('button', { class: 'tbtn', 'aria-label': 'Remove image', onclick: () => { p.images.splice(i, 1); if (p.cover === im.id) p.cover = ''; touch(); fillThumbs(); } }, ic('trash'))));
+      }));
+    }
+    fillThumbs();
+    const onFiles = files => uploadFiles(files, upl, im => { p.images.push(im); if (!p.cover) p.cover = im.id; touch(); fillThumbs(); });
+    const input = h('input', { type: 'file', accept: 'image/*', multiple: true, id: 'pfiles', onchange: e => { onFiles(e.target.files); e.target.value = ''; } });
+    const drop = h('label', { class: 'drop', for: 'pfiles' }, input, ic('img'), h('b', null, 'Add photos'), h('span', null, 'Tap to choose, or drop files here. JPG, PNG or WebP.'));
+    ['dragenter', 'dragover'].forEach(ev => drop.addEventListener(ev, e => { e.preventDefault(); drop.classList.add('over'); }));
+    ['dragleave', 'drop'].forEach(ev => drop.addEventListener(ev, e => { e.preventDefault(); drop.classList.remove('over'); }));
+    drop.addEventListener('drop', e => onFiles(e.dataTransfer.files));
+    const sws = h('div', { class: 'swatches', role: 'group', 'aria-label': 'Project colour' });
+    function fillSw() {
+      sws.replaceChildren(...[0, 1, 2, 3, 4].map(n => h('button', { class: n ? '' : 'auto', style: n ? '--c:var(--c' + n + ')' : null, 'aria-label': n ? 'Colour ' + n : 'Automatic colour', 'aria-pressed': (p.color || 0) === n ? 'true' : 'false', onclick: () => { p.color = n; touch(); fillSw(); } }, n ? '' : 'Auto')));
+    }
+    fillSw();
+    return h('div', { class: 'form' },
+      h('div', { style: 'display:flex;gap:.6rem;flex-wrap:wrap' }, h('button', { class: 'btn small ghost', onclick: () => { adm.editing = null; renderAdmin(); } }, ic('left'), 'All projects'), h('button', { class: 'btn small ghost', onclick: () => { closeAdmin(); openProject(p.id); } }, ic('eye'), 'Preview')),
+      h('h3', { class: 'sec-t' }, 'Project details'),
+      fld('Title', p.title, v => { p.title = v; }, { id: 'f-title' }),
+      h('div', { class: 'two' }, fld('Small label', p.series, v => { p.series = v; }, { id: 'f-series', ph: 'Project 03' }),
+        h('div', null, fld('Category', p.category, v => { p.category = v; }, { id: 'f-cat', list: 'catlist', hint: 'Used for the filter buttons. Pick one or type a new one.' }), h('datalist', { id: 'catlist' }, cats().map(c => h('option', { value: c }))))),
+      h('div', { class: 'two' }, fld('Type', p.type, v => { p.type = v; }, { id: 'f-type', ph: 'Residential interior' }), fld('Year', p.year, v => { p.year = v; }, { id: 'f-year' })),
+      h('div', { class: 'two' }, fld('Space', p.space, v => { p.space = v; }, { id: 'f-space', ph: 'Master bedroom' }), fld('Client', p.client, v => { p.client = v; }, { id: 'f-client' })),
+      fld('Scope of work', p.scope, v => { p.scope = v; }, { id: 'f-scope', ph: 'Space planning, 3D visualization' }),
+      fld('Description', p.desc, v => { p.desc = v; }, { id: 'f-desc', area: true, rows: 5, hint: 'Two or three sentences about the idea, materials and layout.' }),
+      h('h3', { class: 'sec-t' }, 'Project story (optional)'),
+      fld('The brief', (p.story || {}).problem, v => { (p.story = p.story || {}).problem = v; }, { id: 'f-st1', area: true, rows: 3, hint: 'What did the space need?' }),
+      fld('The idea', (p.story || {}).idea, v => { (p.story = p.story || {}).idea = v; }, { id: 'f-st2', area: true, rows: 3, hint: 'Your design thinking.' }),
+      fld('The result', (p.story || {}).result, v => { (p.story = p.story || {}).result = v; }, { id: 'f-st3', area: true, rows: 3 }),
+      fld('Tools used', p.tools, v => { p.tools = v; }, { id: 'f-tools', ph: 'SketchUp, V-Ray, Photoshop', hint: 'Separate with commas.' }),
+      compareEditor(p),
+      h('h3', { class: 'sec-t' }, 'Look'),
+      h('div', { class: 'fld' }, h('span', null, 'Panel colour on the home page'), sws),
+      sw('Show photos in the moving strip', 'Puts this project’s images in the scrolling rows at the top of the home page. Best for room renders.', isFeatured(p), v => { p.feature = v; }, 'f-feat'),
+      h('h3', { class: 'sec-t' }, 'Images'), drop, upl, grid,
+      h('p', { class: 'note' }, 'The star sets the cover image. Photos are resized automatically so the site stays fast.'));
+  }
+
+  function compareEditor(p) {
+    const c = p.compare = p.compare || { a: '', b: '', la: 'Plan', lb: '3D view' }, box = h('div', { class: 'form' });
+    const sel = (label, key) => { const e = h('select', { id: 'cmp-' + key }, h('option', { value: '' }, 'None'), p.images.map((im, i) => h('option', { value: im.id }, 'Image ' + (i + 1) + (im.alt ? ' \u2013 ' + im.alt.slice(0, 40) : '')))); e.value = c[key] || ''; e.addEventListener('change', () => { c[key] = e.value; touch(); }); return h('label', { class: 'fld' }, h('span', null, label), e); };
+    box.append(h('h3', { class: 'sec-t' }, 'Before and after slider (optional)'), h('p', { class: 'note' }, 'Pick two images from this project, for example the floor plan and the 3D render. Visitors drag a handle to compare.'),
+      sel('Left image', 'a'), sel('Right image', 'b'), h('div', { class: 'two' }, fld('Left label', c.la, v => { c.la = v; }, { id: 'cmp-la' }), fld('Right label', c.lb, v => { c.lb = v; }, { id: 'cmp-lb' })));
+    return box;
+  }
+  function uploadFiles(files, box, done) {
+    if (!assetsNS) { toast('Uploads need edit access to this page.'); return; }
+    const q = Array.from(files || []).filter(f => /^image\//.test(f.type) || /\.(jpe?g|png|webp|gif)$/i.test(f.name));
+    if (!q.length) { toast('Choose image files (JPG, PNG or WebP).'); return; }
+    let running = 0, next = 0;
+    const pump = () => {
+      while (running < 2 && next < q.length) {
+        const f = q[next++]; running++;
+        const r = h('div', null, h('span', { class: 'spin' }), f.name); box.append(r);
+        prep(f).then(pr => assetsNS.upload(pr.blob, { type: 'image/jpeg' }).then(res => ({ id: res.id, w: pr.w, h: pr.h, alt: '' })))
+          .then(im => { done(im); r.remove(); }, err => { r.replaceChildren('Could not add ' + f.name + (err && err.code === 'quota_or_state' ? ' (storage is full)' : '')); setTimeout(() => r.remove(), 5000); })
+          .then(() => { running--; pump(); if (!running && next >= q.length) loadUsage(); });
+      }
+    };
+    pump();
+  }
+  function prep(file) {
+    return createImageBitmap(file).then(bmp => {
+      const tries = [[2400, 0.86], [2000, 0.78], [1600, 0.7], [1300, 0.62]];
+      const run = k => {
+        const t = tries[k], sc = Math.min(1, t[0] / Math.max(bmp.width, bmp.height)), w = Math.round(bmp.width * sc), hh = Math.round(bmp.height * sc);
+        const c = document.createElement('canvas'); c.width = w; c.height = hh; const x = c.getContext('2d'); x.fillStyle = '#fff'; x.fillRect(0, 0, w, hh); x.drawImage(bmp, 0, 0, w, hh);
+        return new Promise((res, rej) => c.toBlob(b => b ? res({ blob: b, w, h: hh }) : rej(new Error('encode')), 'image/jpeg', t[1])).then(r => (r.blob.size > 2800000 && k < tries.length - 1) ? run(k + 1) : r);
+      };
+      return run(0);
+    });
+  }
+
+  function resumeEditor() {
+    const P = S.profile, st = h('p', { class: 'note' }, P.resume && P.resume.id ? 'Resume added: ' + (P.resume.name || 'Resume') : 'No resume yet. Visitors see a Download button once you add one.');
+    const input = h('input', { type: 'file', accept: 'application/pdf,.pdf', id: 'pf-resume', onchange: e => {
+      const f = e.target.files[0]; e.target.value = ''; if (!f) return; if (!assetsNS) { toast('Uploads need edit access to this page.'); return; }
+      st.textContent = 'Uploading\u2026';
+      assetsNS.upload(f, { type: 'application/pdf' }).then(r => { P.resume = { id: r.id, name: f.name.replace(/\.pdf$/i, '') }; touch(); st.textContent = 'Resume added: ' + P.resume.name; }, () => { st.textContent = 'Could not upload. Use a PDF under 15 MB.'; });
+    } });
+    return h('div', { class: 'form' }, st, h('div', { style: 'display:flex;gap:.6rem;flex-wrap:wrap' }, h('label', { class: 'btn small ghost', for: 'pf-resume', style: 'cursor:pointer' }, input, ic('download'), 'Upload PDF resume'),
+      P.resume && P.resume.id ? h('button', { class: 'btn small ghost', onclick: () => { P.resume = null; touch(); renderAdmin(); } }, ic('trash'), 'Remove') : null));
+  }
+  function profileEditor() {
+    const P = S.profile, upl = h('div', { class: 'upl' }), holder = h('div', { style: 'max-width:240px' }, pic(P.portrait));
+    const input = h('input', { type: 'file', accept: 'image/*', id: 'pf-portrait', onchange: e => { uploadFiles(e.target.files, upl, im => { P.portrait = im; touch(); holder.replaceChildren(pic(im)); }); e.target.value = ''; } });
+    const eduBox = h('div', { class: 'form' });
+    function fillEdu() {
+      eduBox.replaceChildren(...(P.education || []).map((e, i) => h('div', { class: 'edu-ed' },
+        fld('Course or degree', e.title, v => { e.title = v; }, { id: 'ed-t' + i }), fld('Institute', e.place, v => { e.place = v; }, { id: 'ed-p' + i }), fld('Years', e.years, v => { e.years = v; }, { id: 'ed-y' + i, ph: '(2025–2026)' }),
+        h('div', null, h('button', { class: 'btn small ghost', onclick: () => { P.education.splice(i, 1); touch(); fillEdu(); } }, ic('trash'), 'Remove')))), h('div', null, h('button', { class: 'btn small ghost', onclick: () => { P.education.push({ title: '', place: '', years: '' }); touch(); fillEdu(); } }, ic('plus'), 'Add study')));
+    }
+    fillEdu();
+    return h('div', { class: 'form' },
+      h('h3', { class: 'sec-t' }, 'Introduction'),
+      fld('Name', P.name, v => { P.name = v; }, { id: 'p-name' }),
+      fld('Short tagline', P.tagline, v => { P.tagline = v; }, { id: 'p-tag' }),
+      fld('About text', P.bio, v => { P.bio = v; }, { id: 'p-bio', area: true, rows: 6 }),
+      h('div', { class: 'fld' }, h('span', null, 'Portrait'), holder, h('label', { class: 'btn small ghost', for: 'pf-portrait', style: 'justify-self:start;cursor:pointer' }, input, ic('img'), 'Replace photo')), upl,
+      h('h3', { class: 'sec-t' }, 'Resume'),
+      resumeEditor(),
+      h('h3', { class: 'sec-t' }, 'Contact'),
+      h('div', { class: 'two' }, fld('Email', P.email, v => { P.email = v; }, { id: 'p-email' }), fld('Phone', P.phone, v => { P.phone = v; }, { id: 'p-phone' })),
+      h('h3', { class: 'sec-t' }, 'Studies'), eduBox,
+      h('h3', { class: 'sec-t' }, 'Lists'),
+      fld('Tools (one per line)', (P.software || []).join('\n'), v => { P.software = lines(v); }, { id: 'p-sw', area: true, rows: 6 }),
+      fld('What I do (one per line)', (P.designSkills || []).join('\n'), v => { P.designSkills = lines(v); }, { id: 'p-ds', area: true, rows: 8 }),
+      fld('I love (one per line)', (P.interests || []).join('\n'), v => { P.interests = lines(v); }, { id: 'p-in', area: true, rows: 5 }));
+  }
+
+  function lookEditor() {
+    const T = S.theme, so = S.profile.social, grid = h('div', { class: 'theme-grid' }), colors = h('div', { class: 'color-row' });
+    const fillThemes = () => {
+      const all = PRESETS.map(p => ({ id: p.id, name: p.name, t: p.t })); if (T.custom) all.push({ id: 'custom', name: 'Custom', t: T.custom });
+      grid.replaceChildren(...all.map(p => h('button', { class: 'theme-card', 'aria-pressed': T.preset === p.id ? 'true' : 'false', onclick: () => { T.preset = p.id; applyTheme(); touch(); fillThemes(); fillColors(); } },
+        h('div', { class: 'prev' }, [p.t.bg, p.t.c1, p.t.acc || p.t.c2].map(c => h('i', { style: '--c:' + c }))), h('b', null, p.name))));
+    };
+    const colorIn = (label, key) => {
+      const i = h('input', { type: 'color', id: 'c-' + key, value: resolveTheme()[key] || resolveTheme().c2 });
+      i.addEventListener('input', () => { const c = Object.assign({}, resolveTheme()); c[key] = i.value; if (key === 'c1') c.c2 = c.c3 = c.c4 = i.value; T.custom = c; T.preset = 'custom'; applyTheme(); touch(); fillThemes(); });
+      return h('label', { for: 'c-' + key }, label, i);
+    };
+    const fillColors = () => colors.replaceChildren(colorIn('Page', 'bg'), colorIn('Text', 'ink'), colorIn('Cards', 'c1'), colorIn('Accent', 'acc'));
+    fillThemes(); fillColors();
+    return h('div', { class: 'form' },
+      h('h3', { class: 'sec-t' }, 'Colours'), h('p', { class: 'note' }, 'Pick a ready palette or mix your own. The site updates behind this panel as you go.'), grid, colors,
+      h('h3', { class: 'sec-t' }, 'WhatsApp and Instagram'),
+      fld('WhatsApp number', so.whatsapp, v => { so.whatsapp = v; }, { id: 'so-wa', ph: '919876543210', hint: 'Country code first, digits only. Example: 91 then the 10 digit number.' }),
+      fld('Instagram name', so.instagram, v => { so.instagram = v; }, { id: 'so-ig', ph: '@yourname', hint: 'Your @name or the full profile link.' }));
+  }
+  const helpView = () => h('div', { class: 'help' },
+    h('h3', { class: 'sec-t' }, 'Add a project'),
+    h('ol', null, h('li', null, 'Open Projects and tap New project.'), h('li', null, 'Fill in the title, category and a short description.'), h('li', null, 'Add photos. Use the star for the cover and the arrows to reorder.'), h('li', null, 'Pick a panel colour, then tap Publish.')),
+    h('h3', { class: 'sec-t' }, 'Good to know'),
+    h('ol', null, h('li', null, 'Changes stay in your browser until you tap Publish. Discard throws them away.'), h('li', null, 'Projects appear on the home page in the same order as this list. Use the arrows to move the best ones first.'), h('li', null, 'Removing an image only hides it on the site. The file stays in storage.'), h('li', null, 'Only people with the password can open this dashboard. Visitors see the site only.'), h('li', null, 'Landscape photos at least 1600 px wide look best.')));
+
+  /* ---------- publish + boot ---------- */
+  function buildDoc() {
+    const json = JSON.stringify(S).replace(/</g, '\\u003c').replace(/\u2028/g, '\\u2028').replace(/\u2029/g, '\\u2029');
+    return SK + HEAD_TAGS + '<style id="app-css">' + $('#app-css').textContent + '</style><div id="root"></div><script type="application/json" id="state">' + json + '<\/script><script id="app-js">' + $('#app-js').textContent + '<\/script></body></html>';
+  }
+  function remote(method, path, body) {
+    return fetch(path, { method, headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + getTok() }, body: body ? JSON.stringify(body) : undefined })
+      .then(r => r.json().catch(() => ({})).then(j => { if (!r.ok) { const e = new Error(j.error || 'error'); e.status = r.status; e.code = j.error; throw e; } return j; }));
+  }
+  function saveRemote() {
+    const b = $('#pubbtn'); if (b) { b.disabled = true; b.textContent = 'Saving\u2026'; }
+    remote('PUT', '/api/data', S).then(() => { dirty = false; updPub(); if (b) { b.disabled = false; b.textContent = 'Publish'; } if ($('.adm.open')) renderAdmin(); toast('Saved. Your website is updated.'); }, err => {
+      if (b) { b.disabled = false; b.textContent = 'Publish'; }
+      if (err.status === 401) { clearTok(); toast('Your session ended. Please sign in again.'); showLogin(); return; }
+      toast(err.code === 'too_large' ? 'The site is too large to save. Remove some images.' : 'Could not save. Check your internet and try again.');
+    });
+  }
+  function publish() {
+    if (MODE === 'admin') { saveRemote(); return; }
+    if (!art) return;
+    const b = $('#pubbtn'); if (b) { b.disabled = true; b.textContent = 'Publishing…'; }
+    art.publish(buildDoc()).then(() => toast('Published. Reloading…'), err => {
+      if (b) { b.disabled = false; b.textContent = 'Publish'; }
+      const c = err && err.code;
+      toast(c === 'conflict' ? 'Someone else published first. Reloading with their version.' : c === 'not_writer' || c === 'not_granted' ? 'You need edit access to publish.' : c === 'too_large' ? 'The site is too large to save. Remove some images.' : c === 'rate_limited' ? 'Too many saves. Wait a moment and try again.' : 'Could not publish. Try again.');
+    });
+  }
+  const TK = 'portfolio_admin_token';
+  const getTok = () => { try { const t = JSON.parse(localStorage.getItem(TK) || 'null'); return t && t.exp > Date.now() ? t.token : ''; } catch (e) { return ''; } };
+  const setTok = (token, exp) => { try { localStorage.setItem(TK, JSON.stringify({ token, exp })); } catch (e) {} };
+  const clearTok = () => { try { localStorage.removeItem(TK); } catch (e) {} };
+  function loadRemote() {
+    return fetch('/api/data', { cache: 'no-store' }).then(r => r.ok ? r.json() : null).then(d => {
+      if (d && d.profile && Array.isArray(d.projects)) { S.profile = d.profile; S.theme = d.theme || S.theme; S.projects = d.projects; ensure(); renderSite(); }
+    }).catch(() => {});
+  }
+  function uploadRemote(blob) {
+    return new Promise((res, rej) => { const fr = new FileReader(); fr.onload = () => res(String(fr.result).split(',')[1]); fr.onerror = () => rej(new Error('read')); fr.readAsDataURL(blob); })
+      .then(data => remote('POST', '/api/upload', { name: blob.name || 'image', type: blob.type || 'image/jpeg', data }))
+      .then(r => ({ id: r.url }), err => { if (err.status === 401) { clearTok(); showLogin(); } throw err; });
+  }
+  function startAdmin() {
+    isAdmin = true; art = { publish: () => Promise.resolve() }; assetsNS = { upload: uploadRemote, list: () => Promise.resolve({ usage: null }) };
+    mountAdmin(); renderSite(); openAdmin('projects');
+  }
+  function showLogin(msg) {
+    let m = $('#login');
+    if (!m) {
+      const pw = h('input', { type: 'password', id: 'pw', autocomplete: 'current-password', required: true }), err = h('p', { class: 'note', id: 'login-err', role: 'alert' });
+      const btn = h('button', { class: 'btn', type: 'submit' }, 'Sign in');
+      const form = h('form', { class: 'modal-card', onsubmit: e => {
+        e.preventDefault(); btn.disabled = true; btn.textContent = 'Checking\u2026'; err.textContent = '';
+        fetch('/api/login', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ password: pw.value }) })
+          .then(r => r.json().catch(() => ({})).then(j => ({ ok: r.ok, j })))
+          .then(x => {
+            btn.disabled = false; btn.textContent = 'Sign in';
+            if (!x.ok) { err.textContent = x.j.error === 'not_configured' ? 'The admin password is not set up on the server yet.' : 'Wrong password. Please try again.'; return; }
+            setTok(x.j.token, x.j.exp); pw.value = ''; m.classList.remove('open'); if (!isAdmin) startAdmin(); else renderAdmin();
+          }, () => { btn.disabled = false; btn.textContent = 'Sign in'; err.textContent = 'Could not reach the server. Check your internet.'; });
+      } }, h('h3', null, 'Studio sign in'), h('p', null, 'Enter your password to edit the portfolio.'), h('label', { class: 'fld' }, h('span', null, 'Password'), pw), err, h('div', null, btn));
+      m = h('div', { class: 'modal', id: 'login', role: 'dialog', 'aria-modal': 'true', 'aria-label': 'Sign in' }, form); document.body.append(m);
+    }
+    if (msg) $('#login-err').textContent = msg;
+    m.classList.add('open'); setTimeout(() => { const i = $('#pw'); if (i) i.focus(); }, 60);
+  }
+
+  ensure(); applyTheme(); buildLayers(); renderSite();
+  addEventListener('resize', onScroll);
+  if (MODE === 'public') {
+    loadRemote();
+  } else if (MODE === 'admin') {
+    loadRemote().then(() => { if (getTok()) startAdmin(); else showLogin(); });
+  } else {
+    const c = window.claude;
+    if (c && c.use) {
+      c.use('user').then(u => u ? u.canEdit() : false, () => false).then(ok => {
+        if (!ok) return null;
+        return Promise.all([c.use('artifact'), c.use('assets')]).then(r => { if (!r[0]) return; art = r[0]; assetsNS = r[1]; isAdmin = true; mountAdmin(); renderSite(); });
+      }).catch(() => {});
+    }
+  }
+})();
+</script></body></html>
